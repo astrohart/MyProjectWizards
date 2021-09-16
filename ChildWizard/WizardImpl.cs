@@ -181,6 +181,7 @@ namespace ChildWizard
 
                 _generatedSubProjectFolder =
                     replacementsDictionary["$destinationdirectory$"];
+
                 _subProjectName = replacementsDictionary["$safeprojectname$"];
 
                 // Assume that the name of the solution is the same as that of the folder
