@@ -27,10 +27,12 @@ namespace MyProjectWizard
         /// </summary>
         private string _erroneouslyCreatedProjectContainerFolder;
 
+        /*
         /// <summary>
         /// String containing the name of the folder that contains the generated <c>.sln</c> file.
         /// </summary>
         private string _solutionFileContainerFolderName;
+        */
 
         /// <summary>
         /// Gets or sets a reference to an instance of an object that implements the
