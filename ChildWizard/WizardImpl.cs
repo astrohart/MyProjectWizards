@@ -204,7 +204,7 @@ namespace ChildWizard
             }
             catch
             {
-                DirectoryHelpers.RemoveCreatedDirectory(_subProjectFolder);
+                DirectoryHelpers.RemoveParentDirectoryOf(_subProjectFolder);
 
                 // Re-throw the exception
                 throw;

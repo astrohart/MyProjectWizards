@@ -53,33 +53,33 @@ namespace Core.Files
         /// <summary>
         /// Removes a directory (only if it exists).
         /// </summary>
-        /// <param name="destinationDirectory">
+        /// <param name="path">
         /// (Required.) String containing the fully-qualified pathname of the folder to be
         /// removed.
         /// </param>
         /// <exception cref="T:System.ArgumentException">
         /// Thrown if the required parameter,
-        /// <paramref name="destinationDirectory" />, is passed a blank or
+        /// <paramref name="path" />, is passed a blank or
         /// <see langword="null" /> string for a value.
         /// </exception>
         /// <remarks>
         /// If the folder whose fully-qualified pathname is specified in
-        /// <paramref name="destinationDirectory" /> does not exist on the disk, then this
+        /// <paramref name="path" /> does not exist on the disk, then this
         /// method does nothing.
         /// </remarks>
-        public static void RemoveCreatedDirectory(string destinationDirectory)
+        public static void RemoveParentDirectoryOf(string path)
         {
-            if (string.IsNullOrWhiteSpace(destinationDirectory))
+            if (string.IsNullOrWhiteSpace(path))
                 throw new ArgumentException(
                     Resources.Error_ValueCannotBeNullOrWhiteSpace,
-                    nameof(destinationDirectory)
+                    nameof(path)
                 );
 
-            if (!Directory.Exists(destinationDirectory))
+            if (!Directory.Exists(path))
                 return;
 
             var destinationDirInfo =
-                MakeNewDirectoryInfo.ForPath(destinationDirectory);
+                MakeNewDirectoryInfo.ForPath(path);
 
             // Clean up the template that was written to disk
             if (Directory.Exists(destinationDirInfo.Parent.FullName))

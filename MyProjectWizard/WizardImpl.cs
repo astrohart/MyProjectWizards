@@ -118,7 +118,7 @@ namespace MyProjectWizard
 
                     var dialogResult = dialogBox.ShowDialog();
 
-                    DirectoryHelpers.RemoveCreatedDirectory(
+                    DirectoryHelpers.RemoveParentDirectoryOf(
                         _erroneouslyCreatedProjectContainerFolder
                     );
 
@@ -138,7 +138,7 @@ namespace MyProjectWizard
             }
             catch
             {
-                DirectoryHelpers.RemoveCreatedDirectory(
+                DirectoryHelpers.RemoveParentDirectoryOf(
                     _erroneouslyCreatedProjectContainerFolder
                 );
 
