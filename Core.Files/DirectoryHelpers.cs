@@ -50,12 +50,17 @@ namespace Core.Files
             }
         }
 
-        /// <summary>
-        /// Removes a directory (only if it exists).
+        /// <summary>g
+        /// Removes the parent folder of the directory whose fully-qualified pathname is
+        /// specified in the <paramref name="path" /> parameter -- but only if such a
+        /// folder exists on the disk.
         /// </summary>
         /// <param name="path">
-        /// (Required.) String containing the fully-qualified pathname of the folder to be
-        /// removed.
+        /// (Required.) String containing the fully-qualified pathname of the folder whose
+        /// parent folder is to be removed.
+        /// <para />
+        /// If this folder's parent does not exist on the disk, then this method does
+        /// nothing.
         /// </param>
         /// <exception cref="T:System.ArgumentException">
         /// Thrown if the required parameter,
@@ -63,7 +68,7 @@ namespace Core.Files
         /// <see langword="null" /> string for a value.
         /// </exception>
         /// <remarks>
-        /// If the folder whose fully-qualified pathname is specified in
+        /// If the parent of the folder whose fully-qualified pathname is specified in
         /// <paramref name="path" /> does not exist on the disk, then this
         /// method does nothing.
         /// </remarks>
@@ -71,15 +76,13 @@ namespace Core.Files
         {
             if (string.IsNullOrWhiteSpace(path))
                 throw new ArgumentException(
-                    Resources.Error_ValueCannotBeNullOrWhiteSpace,
-                    nameof(path)
+                    Resources.Error_ValueCannotBeNullOrWhiteSpace, nameof(path)
                 );
 
             if (!Directory.Exists(path))
                 return;
 
-            var destinationDirInfo =
-                MakeNewDirectoryInfo.ForPath(path);
+            var destinationDirInfo = MakeNewDirectoryInfo.ForPath(path);
 
             // Clean up the template that was written to disk
             if (Directory.Exists(destinationDirInfo.Parent.FullName))
