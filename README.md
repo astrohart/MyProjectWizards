@@ -4,7 +4,7 @@
 
 The problem that this project solves is related to multi-project templates.
 
-** Problem: When creating a multi-project template using the Visual Studio **Create new project** dialog box extensibility, out-of-the-box there is no support for toggling on/off which of the sub-projects in the multi-project set you want to create and which you do not.  
+**Problem:** When creating a multi-project template using the Visual Studio **Create new project** dialog box extensibility, out-of-the-box there is no support for toggling on/off which of the sub-projects in the multi-project set you want to create and which you do not.  
 
 Traditionally, when yuo are creating a new [multi-project template](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates?view=vs-2019), it's either all-or-nothing.  We either get all the sub-projects in the template packet added to our solution, or of course, we can choose not to generate anything and then we get nothing.
 
