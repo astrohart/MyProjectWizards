@@ -31,9 +31,11 @@ namespace ChildWizard
         private DTE _dte;
 
         /// <summary>
-        /// String containing the destination directory's fully-qualified pathname.
+        /// String containing the fully-qualified pathname of the sub-folder in which this
+        /// particular project (this Wizard is called once for each sub-project in a multi-project
+        /// template) is going to live in.
         /// </summary>
-        private string _subProjectFolder;
+        private string _generatedSubProjectFolder;
 
         /// <summary>
         /// String containing the name of the project that is safe to use.
@@ -70,7 +72,7 @@ namespace ChildWizard
         {
             try
             {
-                if (!_subProjectFolder.Contains(
+                if (!_generatedSubProjectFolder.Contains(
                     _containingSolutionName + Path.DirectorySeparatorChar +
                     _containingSolutionName
                 ))
@@ -122,7 +124,7 @@ namespace ChildWizard
                     if (projectObject.Item1 != null) //Solution Folder
                     {
                         var solutionFolder =
-                            (SolutionFolder) projectObject.Item1.Object;
+                            (SolutionFolder)projectObject.Item1.Object;
                         solutionFolder.AddFromFile(projectGoodPath);
                     }
                     else
@@ -135,9 +137,9 @@ namespace ChildWizard
                     dir =>
                     {
                         Thread.Sleep(2000);
-                        if (Directory.Exists(_subProjectFolder))
-                            Directory.Delete(_subProjectFolder, true);
-                    }, _subProjectFolder
+                        if (Directory.Exists(_generatedSubProjectFolder))
+                            Directory.Delete(_generatedSubProjectFolder, true);
+                    }, _generatedSubProjectFolder
                 );
             }
             catch (Exception ex)
@@ -172,14 +174,14 @@ namespace ChildWizard
             {
                 _dte = automationObject as DTE;
 
-                _subProjectFolder =
+                _generatedSubProjectFolder =
                     replacementsDictionary["$destinationdirectory$"];
                 _subProjectName = replacementsDictionary["$safeprojectname$"];
 
                 // Assume that the name of the solution is the same as that of the folder
                 // one folder level up from this particular sub-project.
                 _containingSolutionName = Path.GetFileName(
-                    Path.GetDirectoryName(_subProjectFolder)
+                    Path.GetDirectoryName(_generatedSubProjectFolder)
                 );
 
                 LoadConfiguration();
@@ -204,7 +206,7 @@ namespace ChildWizard
             }
             catch
             {
-                DirectoryHelpers.RemoveParentDirectoryOf(_subProjectFolder);
+                DirectoryHelpers.RemoveParentDirectoryOf(_generatedSubProjectFolder);
 
                 // Re-throw the exception
                 throw;
