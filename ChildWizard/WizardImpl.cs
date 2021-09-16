@@ -20,7 +20,11 @@ namespace ChildWizard
     public class WizardImpl : IWizard
     {
         /// <summary>
-        /// Contains the name of the solution.
+        /// Contains the name of the folder that was erroneously
+        /// generated in order to contain the generated sub-projects,
+        /// which we assume has the same name as the solution (without
+        /// the <c>.sln</c> file extension, so we are giving it a
+        /// descriptive name as such.
         /// </summary>
         private string _containingSolutionName;
 
@@ -31,8 +35,9 @@ namespace ChildWizard
         private DTE _dte;
 
         /// <summary>
-        /// String containing the fully-qualified pathname of the sub-folder in which this
-        /// particular project (this Wizard is called once for each sub-project in a multi-project
+        /// String containing the fully-qualified pathname of the
+        /// sub-folder in which this particular project (this Wizard
+        /// is called once for each sub-project in a multi-project
         /// template) is going to live in.
         /// </summary>
         private string _generatedSubProjectFolder;
