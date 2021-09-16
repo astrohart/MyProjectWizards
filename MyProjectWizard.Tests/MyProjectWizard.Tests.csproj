@@ -123,10 +123,6 @@
       <Project>{c76c6495-9765-4c41-8553-3c1bf2107722}</Project>
       <Name>Core.Files</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core.Logging\Core.Logging.csproj">
-      <Project>{6159010b-5df6-445d-9cb5-9ac561911688}</Project>
-      <Name>Core.Logging</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MyProjectWizard\MyProjectWizard.csproj">
       <Project>{e1893ae3-8f26-4f5e-aa96-c666a4bf0e05}</Project>
       <Name>MyProjectWizard</Name>

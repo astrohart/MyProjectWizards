@@ -74,10 +74,6 @@
       <Project>{96757BC7-3A01-44AD-9DC0-50286FEDDB31}</Project>
       <Name>Core.Config</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core.Logging\Core.Logging.csproj">
-      <Project>{6159010B-5DF6-445D-9CB5-9AC561911688}</Project>
-      <Name>Core.Logging</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
