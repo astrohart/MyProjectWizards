@@ -1,5 +1,7 @@
 ﻿# Selectively generating sub-projects in multi-project templates
 
+**NOTE:** Please see the [Template.zip](Template.zip) file for the multi-project VSTemplate used with these Wizards.
+
 ## Introduction
 
 The problem that this project solves is related to multi-project templates.
