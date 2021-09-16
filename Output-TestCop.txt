@@ -1,0 +1,2 @@
+﻿TestCop keyboard shortcut for 'Resharper.ReSharper_TestCopJumpToTestFile' is set to 'Global::Ctrl+G, Ctrl+T'
+TestCop keyboard shortcut for 'ReSharper_TestCopUnitTestRunContext' is set to 'Global::Ctrl+G, Ctrl+X'
