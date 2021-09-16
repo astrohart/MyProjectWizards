@@ -72,7 +72,8 @@ namespace ChildWizard
         /// <param name="projectItem">The project item that finished generating.</param>
         public void ProjectItemFinishedGenerating(ProjectItem projectItem) { }
 
-        /// <summary>Runs custom wizard logic when the wizard has completed all tasks.</summary>
+        /// <summary>Runs custom wizard logic when the
+        /// wizard has completed all tasks.</summary>
         public void RunFinished()
         {
             try
