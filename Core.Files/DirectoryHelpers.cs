@@ -25,6 +25,9 @@ namespace Core.Files
         /// <remarks>
         /// If an operating system error occurs during the operation, then this
         /// method gives up silently.
+        /// <para />
+        /// This is supposed to be a more-robust substitute for the
+        /// <see cref="M:System.IO.Directory.Delete" /> method.
         /// </remarks>
         /// <exception cref="T:System.ArgumentException">
         /// Thrown if the required parameter,
@@ -50,7 +53,7 @@ namespace Core.Files
             }
         }
 
-        /// <summary>g
+        /// <summary>
         /// Removes the parent folder of the directory whose fully-qualified pathname is
         /// specified in the <paramref name="path" /> parameter -- but only if such a
         /// folder exists on the disk.
