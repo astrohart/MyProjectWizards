@@ -1,6 +1,6 @@
 ﻿# Selectively generating sub-projects in multi-project templates
 
-**NOTE:** Please see the [Template.zip](Template.zip) file for the multi-project VSTemplate used with these Wizards.
+**NOTE:** Please see the [Template.zip](Template.zip) file for the multi-project VSTemplate used with these Wizards, along with the `.vstemplate` files used.
 
 ## Introduction
 
@@ -15,9 +15,19 @@ What if, instead, I could call up a dialog box during the **Create new project**
 ![Fig01](images/fig01.png)
 **Figure 1.** Toggling which sub-projects I want to create instead of just having to take all of them.
 
+Notice how the dialog box has **Select All** and **Select None** `LinkLabel` WinForm controls on it.  These are optional --- but, from a UI design perspective, very conventional and strongly recommended.  Clicking the respective `LinkLabel` carries out its action; i.e., clicking the **Select All** `LinkLabel` causes all the check boxes to be selected.
+
+Notice that the dialog box also takes things a step further -- if all the checkboxes are cleared (meaning create no sub-projects), then the **Create** button is grayed out; i.e., disabled.  The **Cancel** button is still available.  This makes sense.  How can we possibly allow the user to click the **Create** button when, by clearing all the check marks from all the check boxes, the user is basically telling us, "don't create ANY sub-projects?"
+
+Normally, by the way, one would implement graying/ungraying a `Button` based on the state of other controls by using a `Application.Idle` event handler.  However, since a `IWizard`-implenting class is not given access to a WinForm message loop, this event is useless.  Instead, we implement the graying and ungraying from a `CheckedChanged` event handler that is wired to the `CheckedChanged` events of each checkbox.
+
+## Creating the multi-project template
+
+**NOTE:** Please see the [Template.zip](Template.zip) file for the multi-project VSTemplate used with these Wizards, along with the `.vstemplate` files used.
+
 Instead of starting from scratch, I worked off the example shown by Joche Ojeda [in his excellent YouTube tutorial](https://www.youtube.com/watch?v=jUmRUQs2xrs).
 
-In his video, Mr. Ojeda lays out a very simple, two-project system.
+In his video, Mr. Ojeda lays out a very simple, two-project system --- a data access layer (DAL) C# Class Library (.NET Framework) and a WinForms app.
 
 Here's its folder structure in File Explorer:
 
@@ -27,7 +37,11 @@ Here's its folder structure in File Explorer:
 
 In this template, we have a dummy Data Access Layer (DAL) and a dummy UI project.  We say "dummy" because the software built from this code does nothing practical.
 
-## Solving the problem: Two Wizard DLLs.
+The multi-project template used in this project is more-or-less adapted directly from Mr. Ojeda's YouTube tutorial.  We won't spend time in this article going over the fine details.  Feel free to explore the `Templates.zip` file in the root level of this project for more details.
+
+**NOTE:** Please see the [Template.zip](Template.zip) file for the multi-project VSTemplate used with these Wizards, along with the `.vstemplate` files used.
+
+## Solving the problem: Two Wizard DLLs; one for the Solution and one for each project.
 
 This project contains code for two [Visual Studio template wizards](https://docs.microsoft.com/en-us/visualstudio/extensibility/how-to-use-wizards-with-project-templates?view=vs-2019) for a [multi-project template](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-create-multi-project-templates?view=vs-2019).
 
