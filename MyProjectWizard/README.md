@@ -32,20 +32,9 @@
   - [Culture](#P-MyProjectWizard-Properties-Resources-Culture 'MyProjectWizard.Properties.Resources.Culture')
   - [ResourceManager](#P-MyProjectWizard-Properties-Resources-ResourceManager 'MyProjectWizard.Properties.Resources.ResourceManager')
 - [WizardImpl](#T-MyProjectWizard-WizardImpl 'MyProjectWizard.WizardImpl')
-  - [_dte](#F-MyProjectWizard-WizardImpl-_dte 'MyProjectWizard.WizardImpl._dte')
   - [_erroneouslyCreatedProjectContainerFolder](#F-MyProjectWizard-WizardImpl-_erroneouslyCreatedProjectContainerFolder 'MyProjectWizard.WizardImpl._erroneouslyCreatedProjectContainerFolder')
-  - [ConfigurationProvider](#P-MyProjectWizard-WizardImpl-ConfigurationProvider 'MyProjectWizard.WizardImpl.ConfigurationProvider')
-  - [CurrentConfiguration](#P-MyProjectWizard-WizardImpl-CurrentConfiguration 'MyProjectWizard.WizardImpl.CurrentConfiguration')
-  - [AppendToLog(text)](#M-MyProjectWizard-WizardImpl-AppendToLog-System-String- 'MyProjectWizard.WizardImpl.AppendToLog(System.String)')
-  - [BeforeOpeningFile(item)](#M-MyProjectWizard-WizardImpl-BeforeOpeningFile-EnvDTE-ProjectItem- 'MyProjectWizard.WizardImpl.BeforeOpeningFile(EnvDTE.ProjectItem)')
-  - [IsDirectoryEmpty(path)](#M-MyProjectWizard-WizardImpl-IsDirectoryEmpty-System-String- 'MyProjectWizard.WizardImpl.IsDirectoryEmpty(System.String)')
-  - [LoadConfiguration()](#M-MyProjectWizard-WizardImpl-LoadConfiguration 'MyProjectWizard.WizardImpl.LoadConfiguration')
-  - [ProjectFinishedGenerating(project)](#M-MyProjectWizard-WizardImpl-ProjectFinishedGenerating-EnvDTE-Project- 'MyProjectWizard.WizardImpl.ProjectFinishedGenerating(EnvDTE.Project)')
-  - [ProjectItemFinishedGenerating(projectItem)](#M-MyProjectWizard-WizardImpl-ProjectItemFinishedGenerating-EnvDTE-ProjectItem- 'MyProjectWizard.WizardImpl.ProjectItemFinishedGenerating(EnvDTE.ProjectItem)')
   - [RunFinished()](#M-MyProjectWizard-WizardImpl-RunFinished 'MyProjectWizard.WizardImpl.RunFinished')
   - [RunStarted(automationObject,replacementsDictionary,runKind,customParams)](#M-MyProjectWizard-WizardImpl-RunStarted-System-Object,System-Collections-Generic-Dictionary{System-String,System-String},Microsoft-VisualStudio-TemplateWizard-WizardRunKind,System-Object[]- 'MyProjectWizard.WizardImpl.RunStarted(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.VisualStudio.TemplateWizard.WizardRunKind,System.Object[])')
-  - [SaveConfiguration()](#M-MyProjectWizard-WizardImpl-SaveConfiguration 'MyProjectWizard.WizardImpl.SaveConfiguration')
-  - [ShouldAddProjectItem(filePath)](#M-MyProjectWizard-WizardImpl-ShouldAddProjectItem-System-String- 'MyProjectWizard.WizardImpl.ShouldAddProjectItem(System.String)')
 
 <a name='T-MyProjectWizard-ExampleDialogBox'></a>
 ## ExampleDialogBox `type`
@@ -418,14 +407,6 @@ MyProjectWizard
 
 Implements a new project wizard in Visual Studio.
 
-<a name='F-MyProjectWizard-WizardImpl-_dte'></a>
-### _dte `constants`
-
-##### Summary
-
-Reference to an instance of an object that implements the
-[DTE](#T-EnvDTE-DTE 'EnvDTE.DTE') interface.
-
 <a name='F-MyProjectWizard-WizardImpl-_erroneouslyCreatedProjectContainerFolder'></a>
 ### _erroneouslyCreatedProjectContainerFolder `constants`
 
@@ -433,132 +414,6 @@ Reference to an instance of an object that implements the
 
 String containing the fully-qualified pathname of the erroneously-generated sub-folder of the
 Solution that is going to contain the individual projects' folders.
-
-<a name='P-MyProjectWizard-WizardImpl-ConfigurationProvider'></a>
-### ConfigurationProvider `property`
-
-##### Summary
-
-Gets a reference to an instance of the object that implements the
-[IConfigurationProvider](#T-Core-Config-IConfigurationProvider 'Core.Config.IConfigurationProvider') interface.
-
-<a name='P-MyProjectWizard-WizardImpl-CurrentConfiguration'></a>
-### CurrentConfiguration `property`
-
-##### Summary
-
-Gets or sets a reference to an instance of an object that implements the
-[IConfiguration](#T-Core-Config-IConfiguration 'Core.Config.IConfiguration') interface.
-
-<a name='M-MyProjectWizard-WizardImpl-AppendToLog-System-String-'></a>
-### AppendToLog(text) `method`
-
-##### Summary
-
-Appends the specified `text` to the log file, splitting on
-any newlines.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| text | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the text to write to the log.
-
-
-
-The specified text is appended to the end of the log file. |
-
-##### Exceptions
-
-| Name | Description |
-| ---- | ----------- |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter,
-`text`, is passed a blank or `null` string
-for a value. |
-
-<a name='M-MyProjectWizard-WizardImpl-BeforeOpeningFile-EnvDTE-ProjectItem-'></a>
-### BeforeOpeningFile(item) `method`
-
-##### Summary
-
-Runs custom wizard logic before opening an item in the template.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| item | [EnvDTE.ProjectItem](#T-EnvDTE-ProjectItem 'EnvDTE.ProjectItem') | The project item that will be opened. |
-
-<a name='M-MyProjectWizard-WizardImpl-IsDirectoryEmpty-System-String-'></a>
-### IsDirectoryEmpty(path) `method`
-
-##### Summary
-
-Checks whether the folder having the specified `path` is
-empty.
-
-##### Returns
-
-`true` if the folder contains no files nor
-subfolders; `false` otherwise.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) String containing the fully-qualified pathname of the folder to be
-checked. |
-
-##### Exceptions
-
-| Name | Description |
-| ---- | ----------- |
-| [System.ArgumentException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.ArgumentException 'System.ArgumentException') | Thrown if the required parameter,
-`path`, is passed a blank or `null` string
-for a value. |
-| [System.IO.DirectoryNotFoundException](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.IO.DirectoryNotFoundException 'System.IO.DirectoryNotFoundException') | Thrown if the folder whose path is specified by the `path`
-parameter cannot be located. |
-
-<a name='M-MyProjectWizard-WizardImpl-LoadConfiguration'></a>
-### LoadConfiguration() `method`
-
-##### Summary
-
-Loads the configuration from the pathname specified by the
-[ConfigFilePath](#P-Core-Config-IConfigurationProvider-ConfigFilePath 'Core.Config.IConfigurationProvider.ConfigFilePath') property and
-sets the value of the
-[CurrentConfiguration](#P-MyProjectWizard-WizardImpl-CurrentConfiguration 'MyProjectWizard.WizardImpl.CurrentConfiguration') property to
-point to it.
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-MyProjectWizard-WizardImpl-ProjectFinishedGenerating-EnvDTE-Project-'></a>
-### ProjectFinishedGenerating(project) `method`
-
-##### Summary
-
-Runs custom wizard logic when a project has finished generating.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| project | [EnvDTE.Project](#T-EnvDTE-Project 'EnvDTE.Project') | The project that finished generating. |
-
-<a name='M-MyProjectWizard-WizardImpl-ProjectItemFinishedGenerating-EnvDTE-ProjectItem-'></a>
-### ProjectItemFinishedGenerating(projectItem) `method`
-
-##### Summary
-
-Runs custom wizard logic when a project item has finished generating.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| projectItem | [EnvDTE.ProjectItem](#T-EnvDTE-ProjectItem 'EnvDTE.ProjectItem') | The project item that finished generating. |
 
 <a name='M-MyProjectWizard-WizardImpl-RunFinished'></a>
 ### RunFinished() `method`
@@ -591,36 +446,3 @@ replaced. |
 the type of wizard run. |
 | customParams | [System.Object[]](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Object[] 'System.Object[]') | The custom parameters with which to perform
 parameter replacement in the project. |
-
-<a name='M-MyProjectWizard-WizardImpl-SaveConfiguration'></a>
-### SaveConfiguration() `method`
-
-##### Summary
-
-Saves the configuration data in the
-[CurrentConfiguration](#P-MyProjectWizard-WizardImpl-CurrentConfiguration 'MyProjectWizard.WizardImpl.CurrentConfiguration') property to
-the file located at the pathname specified by the
-[ConfigFilePath](#P-Core-Config-IConfigurationProvider-ConfigFilePath 'Core.Config.IConfigurationProvider.ConfigFilePath') property.
-
-##### Parameters
-
-This method has no parameters.
-
-<a name='M-MyProjectWizard-WizardImpl-ShouldAddProjectItem-System-String-'></a>
-### ShouldAddProjectItem(filePath) `method`
-
-##### Summary
-
-Indicates whether the specified project item should be added to the
-project.
-
-##### Returns
-
-true if the project item should be added to the project; otherwise,
-false.
-
-##### Parameters
-
-| Name | Type | Description |
-| ---- | ---- | ----------- |
-| filePath | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The path to the project item. |
