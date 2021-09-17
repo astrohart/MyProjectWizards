@@ -108,14 +108,14 @@ Required designer variable.
 
 ##### Summary
 
-Gets the value of the checkbox.
+Gets the value of the Create Data Access Layer checkbox.
 
 <a name='P-MyProjectWizard-ExampleDialogBox-CreateUserInterfaceLayer'></a>
 ### CreateUserInterfaceLayer `property`
 
 ##### Summary
 
-Gets the value of the checkbox.
+Gets the value of the Create User Interface Layer checkbox.
 
 <a name='P-MyProjectWizard-ExampleDialogBox-CurrentConfiguration'></a>
 ### CurrentConfiguration `property`
