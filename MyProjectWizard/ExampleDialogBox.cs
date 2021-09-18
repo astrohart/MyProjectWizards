@@ -69,13 +69,13 @@ namespace MyProjectWizard
         }
 
         /// <summary>
-        /// Gets the value of the <b>Create Data Access Layer</b> checkbox.
+        /// Gets the value of the Create Data Access Layer checkbox.
         /// </summary>
         public bool CreateDataAccessLayer
             => createDataAccessLayerCheckBox.Checked;
 
         /// <summary>
-        /// Gets the value of the <b>Create User Interface Layer</b> checkbox.
+        /// Gets the value of the Create User Interface Layer checkbox.
         /// </summary>
         public bool CreateUserInterfaceLayer
             => createUserInterfaceLayerCheckBox.Checked;

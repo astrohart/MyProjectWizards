@@ -1,5 +1,4 @@
 ﻿using Core.Common;
-using Core.Config;
 using Core.Files;
 using EnvDTE;
 using EnvDTE80;
@@ -17,7 +16,7 @@ namespace ChildWizard
     /// Implements a wizard for the generation of an individual project in the
     /// solution.
     /// </summary>
-    public class WizardImpl : IWizard
+    public class WizardImpl : WizardImplBase, IWizard
     {
         /// <summary>
         /// Contains the name of the folder that was erroneously
@@ -27,12 +26,6 @@ namespace ChildWizard
         /// descriptive name as such.
         /// </summary>
         private string _containingSolutionName;
-
-        /// <summary>
-        /// Reference to an instance of an object that implements the
-        /// <see cref="T:EnvDTE.DTE" /> interface.
-        /// </summary>
-        private DTE _dte;
 
         /// <summary>
         /// String containing the fully-qualified pathname of the
@@ -48,32 +41,9 @@ namespace ChildWizard
         private string _subProjectName;
 
         /// <summary>
-        /// Gets or sets a reference to an instance of an object that implements the
-        /// <see cref="T:Core.Config.IConfiguration" /> interface.
+        /// Runs custom wizard logic when the
+        /// wizard has completed all tasks.
         /// </summary>
-        public IConfiguration CurrentConfiguration { get; set; }
-
-        /// <summary>
-        /// Gets a reference to an instance of the object that implements the
-        /// <see cref="T:Core.Config.IConfigurationProvider" /> interface.
-        /// </summary>
-        protected static IConfigurationProvider ConfigurationProvider
-            => GetConfigurationProvider.SoleInstance();
-
-        /// <summary>Runs custom wizard logic before opening an item in the template.</summary>
-        /// <param name="item">The project item that will be opened.</param>
-        public void BeforeOpeningFile(ProjectItem item) { }
-
-        /// <summary>Runs custom wizard logic when a project has finished generating.</summary>
-        /// <param name="project">The project that finished generating.</param>
-        public void ProjectFinishedGenerating(Project project) { }
-
-        /// <summary>Runs custom wizard logic when a project item has finished generating.</summary>
-        /// <param name="projectItem">The project item that finished generating.</param>
-        public void ProjectItemFinishedGenerating(ProjectItem projectItem) { }
-
-        /// <summary>Runs custom wizard logic when the
-        /// wizard has completed all tasks.</summary>
         public void RunFinished()
         {
             try
@@ -172,14 +142,14 @@ namespace ChildWizard
         /// The custom parameters with which to perform
         /// parameter replacement in the project.
         /// </param>
-        public void RunStarted(object automationObject,
+        public override void RunStarted(object automationObject,
             Dictionary<string, string> replacementsDictionary,
             WizardRunKind runKind, object[] customParams)
         {
+            base.RunStarted(automationObject, replacementsDictionary, runKind, customParams);
+
             try
             {
-                _dte = automationObject as DTE;
-
                 _generatedSubProjectFolder =
                     replacementsDictionary["$destinationdirectory$"];
 
@@ -213,157 +183,13 @@ namespace ChildWizard
             }
             catch
             {
-                DirectoryHelpers.RemoveParentDirectoryOf(_generatedSubProjectFolder);
+                DirectoryHelpers.RemoveParentDirectoryOf(
+                    _generatedSubProjectFolder
+                );
 
                 // Re-throw the exception
                 throw;
             }
-        }
-
-        /// <summary>
-        /// Indicates whether the specified project item should be added to the
-        /// project.
-        /// </summary>
-        /// <returns>
-        /// true if the project item should be added to the project; otherwise,
-        /// false.
-        /// </returns>
-        /// <param name="filePath">The path to the project item.</param>
-        public bool ShouldAddProjectItem(string filePath)
-            => true;
-
-        private static void WriteBlankLineToLog()
-        {
-            try
-            {
-                File.AppendAllText(
-                    $@"C:\{DateTime.Now:yyyy-dd-M}_log.txt", "\r\n"
-                );
-            }
-            catch
-            {
-                //Ignored.
-            }
-        }
-
-        private static void WriteLineToLog(string text)
-            => WriteLineToLog(DebugLevel.Debug, text);
-
-        private static string GetLogLabelFor(DebugLevel level)
-        {
-            string result;
-
-            switch (level)
-            {
-                case DebugLevel.Debug:
-                    result = "[  DEBUG  ]  ";
-                    break;
-
-                case DebugLevel.Warn:
-                    result = "[ WARNING ]  ";
-                    break;
-
-                case DebugLevel.Error:
-                    result = "[  ERROR  ]  ";
-                    break;
-
-                case DebugLevel.Info:
-                    result = "[  INFO   ]  ";
-                    break;
-
-                default:
-                    throw new ArgumentOutOfRangeException(
-                        nameof(level), level, null
-                    );
-            }
-
-            return result;
-        }
-
-        private static void WriteLineToLog(DebugLevel level, string text)
-        {
-            if (string.IsNullOrWhiteSpace(text))
-                return;
-
-            try
-            {
-                File.AppendAllText(
-                    $@"C:\{DateTime.Now:yyyy-dd-M}_log.txt",
-                    text.EndsWith("\r\n")
-                        ? $"\t{GetLogLabelFor(level)}  {DateTime.Now:yyyy-dd-M--HH-mm-ss}  {text}"
-                        : $"\t{GetLogLabelFor(level)}  {DateTime.Now:yyyy-dd-M--HH-mm-ss}  {text}\r\n"
-                );
-            }
-            catch
-            {
-                //Ignored.
-            }
-        }
-
-        private static void DumpToLog(Exception exception)
-        {
-            if (exception == null) return;
-
-            try
-            {
-                WriteLineToLog(
-                    DebugLevel.Error,
-                    $"{exception.Message}\r\n\t{exception.StackTrace}\r\n\t Source: {exception.Source}"
-                );
-            }
-            catch
-            {
-                //Ignored.
-            }
-        }
-
-        /// <summary>
-        /// Loads the configuration from the pathname specified by the
-        /// <see cref="P:Core.Config.IConfigurationProvider.ConfigFilePath" /> property and
-        /// sets the value of the
-        /// <see cref="P:ChildWizard.WizardImpl.CurrentConfiguration" /> property to
-        /// point to it.
-        /// </summary>
-        protected void LoadConfiguration()
-            => CurrentConfiguration =
-                ConfigurationProvider.Load(
-                    ConfigurationProvider.ConfigFilePath
-                );
-
-        /// <summary>
-        /// Saves the configuration data in the
-        /// <see cref="P:ChildWizard.WizardImpl.CurrentConfiguration" /> property to
-        /// the file located at the pathname specified by the
-        /// <see cref="P:Core.Config.IConfigurationProvider.ConfigFilePath" /> property.
-        /// </summary>
-        protected void SaveConfiguration()
-            => ConfigurationProvider.Save(
-                ConfigurationProvider.ConfigFilePath, CurrentConfiguration
-            );
-
-        /// <summary>
-        /// Appends the specified <paramref name="text" /> to the log file, splitting on
-        /// any newlines.
-        /// </summary>
-        /// <param name="text">
-        /// (Required.) String containing the text to write to the log.
-        /// <para />
-        /// The specified text is appended to the end of the log file.
-        /// </param>
-        /// <exception cref="T:System.ArgumentException">
-        /// Thrown if the required parameter,
-        /// <paramref name="text" />, is passed a blank or <see langword="null" /> string
-        /// for a value.
-        /// </exception>
-        protected void AppendToLog(string text)
-            => WriteLineToLog(text);
-
-        private enum DebugLevel
-        {
-            Debug,
-            Warn,
-            Error,
-            Info
         }
     }
 }
