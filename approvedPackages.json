@@ -56,6 +56,19 @@
       ]
     },
     {
+      "name": "Core.Files",
+      "approved_packages": [
+        {
+          "name": "AlphaFS",
+          "version": "latest"
+        },
+        {
+          "name": "Vsxmd",
+          "version": "latest"
+        }
+      ]
+    },
+    {
       "name": "Core.Files.Tests",
       "approved_packages": [
         {
