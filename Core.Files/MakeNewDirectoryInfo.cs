@@ -1,4 +1,5 @@
 ﻿using System;
+using PostSharp.Patterns.Diagnostics;
 using System.IO;
 
 namespace Core.Files
@@ -7,6 +8,7 @@ namespace Core.Files
     /// Manufactures new instances of <see cref="T:System.IO.DirectoryInfo" /> for a
     /// specified path, and then return a reference to the instance thusly initialized.
     /// </summary>
+    [Log(AttributeExclude = true)]
     public static class MakeNewDirectoryInfo
     {
         /// <summary>
