@@ -1,9 +1,11 @@
 ﻿namespace Core.Config
+using PostSharp.Patterns.Diagnostics;
 {
     /// <summary>
     /// Creates instances of objects that implement the
     /// <see cref="T:Core.Config.IConfigurationProvider" /> interface.
     /// </summary>
+    [Log(AttributeExclude = true)]
     public static class GetConfigurationProvider
     {
         /// <summary>

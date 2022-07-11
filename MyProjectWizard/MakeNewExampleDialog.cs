@@ -1,4 +1,5 @@
 ﻿using EnvDTE;
+using PostSharp.Patterns.Diagnostics;
 
 namespace MyProjectWizard
 {
@@ -7,6 +8,7 @@ namespace MyProjectWizard
     /// <see cref="T:MyProjectWizard.IExampleDialogBox" /> interface, and returns
     /// references to them.
     /// </summary>
+    [Log(AttributeExclude = true)]
     public static class MakeNewExampleDialogBox
     {
         /// <summary>

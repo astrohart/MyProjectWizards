@@ -1,4 +1,5 @@
 ﻿using System;
+using PostSharp.Patterns.Diagnostics;
 
 namespace Core.Config
 {
@@ -7,6 +8,7 @@ namespace Core.Config
     /// <see cref="T:Core.Config.IConfiguration" /> interface, and returns references
     /// to them.
     /// </summary>
+    [Log(AttributeExclude = true)]
     public static class MakeNewConfiguration
     {
         /// <summary>
