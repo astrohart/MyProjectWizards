@@ -1,4 +1,4 @@
-﻿namespace Core.Common
+namespace Core.Common
 {
     /// <summary>
     /// Identifies the debug message level for a logging message.

@@ -1,4 +1,4 @@
-﻿namespace Core.Common
+namespace Core.Common
 {
     /// <summary>
     /// Specifies the action that the Wizard is to take.
