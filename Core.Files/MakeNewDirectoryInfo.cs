@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using PostSharp.Patterns.Diagnostics;
 using System.IO;
 

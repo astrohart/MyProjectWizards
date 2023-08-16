@@ -1,4 +1,4 @@
-using Core.Config;
+﻿using Core.Config;
 using NUnit.Framework;
 using System;
 using System.Windows.Forms;

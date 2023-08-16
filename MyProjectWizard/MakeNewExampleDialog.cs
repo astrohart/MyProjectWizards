@@ -1,4 +1,4 @@
-using EnvDTE;
+﻿using EnvDTE;
 using PostSharp.Patterns.Diagnostics;
 
 namespace MyProjectWizard
