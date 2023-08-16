@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # ChildWizard
 
 ## Contents
