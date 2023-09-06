@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("xyLOGIX, LLC")]
 [assembly: AssemblyProduct("Core.Files")]
-[assembly: AssemblyCopyright("Copyright ? xyLOGIX, LLC 2021")]
+[assembly: AssemblyCopyright("Copyright © xyLOGIX, LLC 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
