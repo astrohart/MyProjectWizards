@@ -1,20 +1,15 @@
-using Core.Config;
+﻿using Core.Config;
 using NUnit.Framework;
 using System;
 using System.Windows.Forms;
 
 namespace MyProjectWizard.Tests
 {
-    /// <summary>
-    /// Provides unit tests for the methods, properties, and events of the
-    /// <see cref="T:MyProjectWizard.ExampleDialogBox" /> class.
-    /// </summary>
+///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:MyProjectWizard.ExampleDialogBox" /> class. </summary>
     [TestFixture]
     public class ExampleDialogBoxTests
     {
-        /// <summary>
-        /// Initializes the state of this fixture for every unit test session.
-        /// </summary>
+///  <summary> Initializes the state of this fixture for every unit test session. </summary>
         [SetUp]
         public void Initialize()
         {
@@ -22,10 +17,7 @@ namespace MyProjectWizard.Tests
             Application.SetCompatibleTextRenderingDefault(false);
         }
 
-        /// <summary>
-        /// Checks that the dialog check boxes are set properly when a
-        /// <see cref="T:Core.Config.Configuration" /> is initialized a certain way.
-        /// </summary>
+///  <summary> Checks that the dialog check boxes are set properly when a <see cref="T:Core.Config.Configuration" /> is initialized a certain way. </summary>
         [Test]
         public void Test_Configuration_DataBinding_Works()
         {

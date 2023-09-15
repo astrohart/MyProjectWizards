@@ -1,4 +1,4 @@
-# Selectively generating sub-projects in multi-project templates
+﻿# Selectively generating sub-projects in multi-project templates
 
 **NOTE:** Please see the [Template.zip](Template.zip) file for the multi-project VSTemplate used with these Wizards, along with the `.vstemplate` files used.
 
