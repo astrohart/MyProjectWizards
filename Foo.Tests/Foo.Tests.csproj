@@ -130,10 +130,6 @@
       <Project>{c76c6495-9765-4c41-8553-3c1bf2107722}</Project>
       <Name>Core.Files</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Foo\Foo.csproj">
-      <Project>{e1893ae3-8f26-4f5e-aa96-c666a4bf0e05}</Project>
-      <Name>Foo</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
