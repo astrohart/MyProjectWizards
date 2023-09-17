@@ -69,10 +69,13 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExampleDialogBoxTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -94,6 +97,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1382_cogs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Config\Core.Config.csproj">
+      <Project>{96757BC7-3A01-44AD-9DC0-50286FEDDB31}</Project>
+      <Name>Core.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectWizard\MyProjectWizard.csproj">
+      <Project>{1CD4CF33-8F6C-4BA7-99FB-B54861A5138B}</Project>
+      <Name>MyProjectWizard</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
