@@ -5,10 +5,33 @@ using System.IO;
 
 namespace Core.Files
 {
-///  <summary> Methods to process directories in the file system. </summary>
+    /// <summary> Methods to process directories in the file system. </summary>
     public static class DirectoryHelpers
     {
-///  <summary> Deletes the specified directory, and, if indicated, any subdirectories and files within the directory. </summary> <param name="path"> (Required.)  Fully-qualified pathname of a folder that exists on the disk. </param> <param name="recursive"> (Optional.) Indicates whether the subdirectories and files within the directory should also be deleted. </param> <remarks> If an operating system error occurs during the operation, then this method gives up silently. <para /> This is supposed to be a more-robust substitute for the <see cref="M:System.IO.Directory.Delete" /> method. </remarks> <exception cref="T:System.ArgumentException"> Thrown if the required parameter, <paramref name="path" />, is passed a blank or <see langword="null" /> string for a value. </exception>
+        /// <summary>
+        /// Deletes the specified directory, and, if indicated, any
+        /// subdirectories and files within the directory.
+        /// </summary>
+        /// <param name="path">
+        /// (Required.)  Fully-qualified pathname of a folder that
+        /// exists on the disk.
+        /// </param>
+        /// <param name="recursive">
+        /// (Optional.) Indicates whether the subdirectories and
+        /// files within the directory should also be deleted.
+        /// </param>
+        /// <remarks>
+        /// If an operating system error occurs during the operation, then this
+        /// method gives up silently.
+        /// <para />
+        /// This is supposed to be a more-robust substitute for the
+        /// <see cref="M:System.IO.Directory.Delete" /> method.
+        /// </remarks>
+        /// <exception cref="T:System.ArgumentException">
+        /// Thrown if the required parameter,
+        /// <paramref name="path" />, is passed a blank or <see langword="null" /> string
+        /// for a value.
+        /// </exception>
         public static void RemoveDirectory(string path, bool recursive = false)
         {
             if (string.IsNullOrWhiteSpace(path))
@@ -28,7 +51,28 @@ namespace Core.Files
             }
         }
 
-///  <summary> Removes the parent folder of the directory whose fully-qualified pathname is specified in the <paramref name="path" /> parameter -- but only if such a folder exists on the disk. </summary> <param name="path"> (Required.) String containing the fully-qualified pathname of the folder whose parent folder is to be removed. <para /> If this folder's parent does not exist on the disk, then this method does nothing. </param> <exception cref="T:System.ArgumentException"> Thrown if the required parameter, <paramref name="path" />, is passed a blank or <see langword="null" /> string for a value. </exception> <remarks> If the parent of the folder whose fully-qualified pathname is specified in <paramref name="path" /> does not exist on the disk, then this method does nothing. </remarks>
+        /// <summary>
+        /// Removes the parent folder of the directory whose fully-qualified
+        /// pathname is specified in the <paramref name="path" /> parameter -- but only if
+        /// such a folder exists on the disk.
+        /// </summary>
+        /// <param name="path">
+        /// (Required.) String containing the fully-qualified pathname
+        /// of the folder whose parent folder is to be removed.
+        /// <para />
+        /// If this folder's parent does not exist on the disk, then this method does
+        /// nothing.
+        /// </param>
+        /// <exception cref="T:System.ArgumentException">
+        /// Thrown if the required parameter,
+        /// <paramref name="path" />, is passed a blank or <see langword="null" /> string
+        /// for a value.
+        /// </exception>
+        /// <remarks>
+        /// If the parent of the folder whose fully-qualified pathname is
+        /// specified in <paramref name="path" /> does not exist on the disk, then this
+        /// method does nothing.
+        /// </remarks>
         public static void RemoveParentDirectoryOf(string path)
         {
             if (string.IsNullOrWhiteSpace(path))

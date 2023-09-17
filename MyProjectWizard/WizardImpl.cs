@@ -1,16 +1,18 @@
 ﻿using Core.Common;
 using Core.Files;
-using Microsoft.VisualStudio.TemplateWizard;
 using System.Collections.Generic;
 using System.IO;
-using System.Windows.Forms;
 
 namespace MyProjectWizard
 {
-///  <summary> Implements a new project wizard in Visual Studio. </summary>
+    /// <summary> Implements a new project wizard in Visual Studio. </summary>
     public class WizardImpl : WizardImplBase, IWizard
     {
-///  <summary> String containing the fully-qualified pathname of the erroneously-generated sub-folder of the Solution that is going to contain the individual projects' folders. </summary>
+        /// <summary>
+        /// String containing the fully-qualified pathname of the
+        /// erroneously-generated sub-folder of the Solution that is going to contain the
+        /// individual projects' folders.
+        /// </summary>
         private string _erroneouslyCreatedProjectContainerFolder;
 
         /*
@@ -18,7 +20,7 @@ namespace MyProjectWizard
         private string _solutionFileContainerFolderName;
         */
 
-///  <summary>Runs custom wizard logic when the wizard has completed all tasks.</summary>
+        /// <summary>Runs custom wizard logic when the wizard has completed all tasks.</summary>
         public void RunFinished()
         {
             // Here, _erroneouslyCreatedProjectContainerFolder holds the path to the
@@ -36,12 +38,31 @@ namespace MyProjectWizard
                 );
         }
 
-///  <summary>Runs custom wizard logic at the beginning of a template wizard run.</summary> <param name="automationObject"> The automation object being used by the template wizard. </param> <param name="replacementsDictionary"> The list of standard parameters to be replaced. </param> <param name="runKind"> A <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardRunKind" /> indicating the type of wizard run. </param> <param name="customParams"> The custom parameters with which to perform parameter replacement in the project. </param>
+        /// <summary>Runs custom wizard logic at the beginning of a template wizard run.</summary>
+        /// <param name="automationObject">
+        /// The automation object being used by the
+        /// template wizard.
+        /// </param>
+        /// <param name="replacementsDictionary">
+        /// The list of standard parameters to be
+        /// replaced.
+        /// </param>
+        /// <param name="runKind">
+        /// A
+        /// <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardRunKind" /> indicating
+        /// the type of wizard run.
+        /// </param>
+        /// <param name="customParams">
+        /// The custom parameters with which to perform
+        /// parameter replacement in the project.
+        /// </param>
         public override void RunStarted(object automationObject,
             Dictionary<string, string> replacementsDictionary,
             WizardRunKind runKind, object[] customParams)
         {
-            base.RunStarted(automationObject, replacementsDictionary, runKind, customParams);
+            base.RunStarted(
+                automationObject, replacementsDictionary, runKind, customParams
+            );
 
             try
             {
@@ -56,8 +77,8 @@ namespace MyProjectWizard
                 LoadConfiguration();
 
                 using (var dialogBox = new ExampleDialogBox(
-                    _dte, _erroneouslyCreatedProjectContainerFolder
-                ))
+                           _dte, _erroneouslyCreatedProjectContainerFolder
+                       ))
                 {
                     dialogBox.CurrentConfiguration = CurrentConfiguration;
 
@@ -76,10 +97,6 @@ namespace MyProjectWizard
                 }
 
                 SaveConfiguration();
-            }
-            catch (WizardCancelledException)
-            {
-                throw;
             }
             catch
             {
