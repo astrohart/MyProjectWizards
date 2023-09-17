@@ -1,14 +1,14 @@
 ﻿using Core.Config;
 using System;
 
-namespace MyProjectWizard
+namespace Foo
 {
     /// <summary> Sample windows form. </summary>
     public partial class ExampleDialogBox : Form, IExampleDialogBox
     {
         /// <summary>
         /// Constructs a new instance of
-        /// <see cref="T:MyProjectWizard.ExampleDialogBox" /> and returns a reference to
+        /// <see cref="T:Foo.ExampleDialogBox" /> and returns a reference to
         /// it.
         /// </summary>
         /// <param name="dte">
@@ -45,7 +45,7 @@ namespace MyProjectWizard
 
         /// <summary>
         /// Constructs a new instance of
-        /// <see cref="T:MyProjectWizard.ExampleDialogBox" /> and returns a reference to
+        /// <see cref="T:Foo.ExampleDialogBox" /> and returns a reference to
         /// it.
         /// </summary>
         public ExampleDialogBox()

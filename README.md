@@ -57,7 +57,7 @@ In that same article, `EliSherer` shared a solution that we ended up using effec
 
 ## Project components
 
-This project cromprises a `Root` Wizsrd DLL, `MyProjectWizard` and a `Child` Wizard DLL, `ChildWizard`, both implemented as separate C# Class Library (.NET Framework) projects in this solution.
+This project cromprises a `Root` Wizsrd DLL, `Foo` and a `Child` Wizard DLL, `ChildWizard`, both implemented as separate C# Class Library (.NET Framework) projects in this solution.
 
 This solution also contains several other C# Class Libraries named `Core.*` where the `*` is a wildcard, that allows the `Root` and `Child` Wizards to share common code.
 
@@ -76,7 +76,7 @@ So, how do we go about implementing this?
 
 Let's suppose we have a certain multi-project template.  Instead of starting from scratch, I worked off the example shown by Joche Ojeda [in his excellent YouTube tutorial](https://www.youtube.com/watch?v=jUmRUQs2xrs).  
 
-The "root" `.vstemplate` file references `MyProjectWizard` as its `WizardExtension`:
+The "root" `.vstemplate` file references `Foo` as its `WizardExtension`:
 
 ```
 <VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
@@ -104,8 +104,8 @@ The "root" `.vstemplate` file references `MyProjectWizard` as its `WizardExtensi
         </ProjectCollection>
     </TemplateContent>
     <WizardExtension>
-        <Assembly>MyProjectWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7001bd97f2aab15c</Assembly>
-        <FullClassName>MyProjectWizard.WizardImpl</FullClassName>
+        <Assembly>Foo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7001bd97f2aab15c</Assembly>
+        <FullClassName>Foo.WizardImpl</FullClassName>
     </WizardExtension>
 </VSTemplate>
 ```
@@ -155,7 +155,7 @@ Since the `.vstemplate` files for the two sub-projects are virtually identical, 
 
 (By the way, how to get the assembly references you ask?  I am not going to belabor those points; see the pre- and post-build events of each project for more details.  Basically, you have to strong-name sign each DLL and install each DLL into the Global Assembly Cache (GAC).)
 
-So, the **Create new project** dialog box in Visual Studio first calls the `WizardImpl` (implementing the `IWizard` interface) class in the `MyProjectWizard` DLL (i.e., the `Root` Wizard).  This displays a dialog box and writes configuration information to a JSON file in a temporary directory.
+So, the **Create new project** dialog box in Visual Studio first calls the `WizardImpl` (implementing the `IWizard` interface) class in the `Foo` DLL (i.e., the `Root` Wizard).  This displays a dialog box and writes configuration information to a JSON file in a temporary directory.
 
 Then, for each project, the `ChildWizard` DLL's `WizardImpl` class is called, and this class is responsible for loading the configuration, which should encode which projects are turned on and off, and then, if the project that the Wizard is currently being called for is not the project specified by configuration to be created, a `WizardBackoutException` is thrown by the `Child` Wizard.
 

@@ -3,7 +3,7 @@ using Core.Files;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MyProjectWizard
+namespace Foo
 {
     /// <summary> Implements a new project wizard in Visual Studio. </summary>
     public class WizardImpl : WizardImplBase, IWizard

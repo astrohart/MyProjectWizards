@@ -1,5 +1,5 @@
 ﻿
-namespace MyProjectWizard
+namespace Foo
 {
     partial class ExampleDialogBox
     {

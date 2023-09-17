@@ -1,8 +1,8 @@
-﻿namespace MyProjectWizard
+﻿namespace Foo
 {
     /// <summary>
     /// Creates new instances of objects that implement the
-    /// <see cref="T:MyProjectWizard.IExampleDialogBox" /> interface, and returns
+    /// <see cref="T:Foo.IExampleDialogBox" /> interface, and returns
     /// references to them.
     /// </summary>
     [Log(AttributeExclude = true)]
@@ -10,7 +10,7 @@
     {
         /// <summary>
         /// Creates a new instance of an object that implements the
-        /// <see cref="T:MyProjectWizard.IExampleDialogBox" /> interface and returns a
+        /// <see cref="T:Foo.IExampleDialogBox" /> interface and returns a
         /// reference to it.
         /// </summary>
         /// <param name="dte">
@@ -24,7 +24,7 @@
         /// </param>
         /// <returns>
         /// Reference to an instance of an object that implements the
-        /// <see cref="T:MyProjectWizard.IExampleDialogBox" /> interface.
+        /// <see cref="T:Foo.IExampleDialogBox" /> interface.
         /// </returns>
         /// <exception cref="T:System.ArgumentNullException">
         /// Thrown if the required
@@ -41,12 +41,12 @@
 
         /// <summary>
         /// Creates a new instance of an object that implements the
-        /// <see cref="T:MyProjectWizard.IExampleDialogBox" /> interface and returns a
+        /// <see cref="T:Foo.IExampleDialogBox" /> interface and returns a
         /// reference to it.
         /// </summary>
         /// <returns>
         /// Reference to an instance of an object that implements the
-        /// <see cref="T:MyProjectWizard.IExampleDialogBox" /> interface.
+        /// <see cref="T:Foo.IExampleDialogBox" /> interface.
         /// </returns>
         public static IExampleDialogBox FromScratch()
             => new ExampleDialogBox();

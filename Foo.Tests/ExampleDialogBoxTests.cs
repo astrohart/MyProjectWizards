@@ -3,9 +3,9 @@ using NUnit.Framework;
 using System;
 using System.Windows.Forms;
 
-namespace MyProjectWizard.Tests
+namespace Foo.Tests
 {
-///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:MyProjectWizard.ExampleDialogBox" /> class. </summary>
+///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:Foo.ExampleDialogBox" /> class. </summary>
     [TestFixture]
     public class ExampleDialogBoxTests
     {

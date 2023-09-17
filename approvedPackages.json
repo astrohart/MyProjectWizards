@@ -1,4 +1,4 @@
-﻿{
+﻿﻿{
   "projects": [
     {
       "name": "ChildWizard",
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "name": "MyProjectWizard",
+      "name": "Foo",
       "approved_packages": [
         {
           "name": "AlphaFS",
@@ -107,7 +107,7 @@
       ]
     },
     {
-      "name": "MyProjectWizard.Tests",
+      "name": "Foo.Tests",
       "approved_packages": [
         {
           "name": "AlphaFS",

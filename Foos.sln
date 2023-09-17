@@ -1,8 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProjectWizard", "MyProjectWizard\MyProjectWizard.csproj", "{E1893AE3-8F26-4F5E-AA96-C666A4BF0E05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foo", "Foo\Foo.csproj", "{E1893AE3-8F26-4F5E-AA96-C666A4BF0E05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildWizard", "ChildWizard\ChildWizard.csproj", "{0C3F512C-A084-4BBF-B00D-0F7D9ADB7853}"
 EndProject
@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Config", "Core.Config\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{E0B8D374-63F3-4211-AA0F-5DF56526283B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProjectWizard.Tests", "MyProjectWizard.Tests\MyProjectWizard.Tests.csproj", "{DAE8C4B9-D39B-4D80-8F85-B96DAA7BAB45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foo.Tests", "Foo.Tests\Foo.Tests.csproj", "{DAE8C4B9-D39B-4D80-8F85-B96DAA7BAB45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Files.Tests", "Core.Files.Tests\Core.Files.Tests.csproj", "{94E426F0-7FCD-40A5-9765-C8098D621A2E}"
 EndProject

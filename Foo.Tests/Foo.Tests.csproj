@@ -21,7 +21,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
     <SkipPostSharp>False</SkipPostSharp>
-    <DocumentationFile>bin\x64\Debug\MyProjectWizard.Tests.xml</DocumentationFile>
+    <DocumentationFile>bin\x64\Debug\Foo.Tests.xml</DocumentationFile>
     <NoWarn>CS1591;CS1587</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
@@ -35,7 +35,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
     <SkipPostSharp>True</SkipPostSharp>
-    <DocumentationFile>bin\x64\Release\MyProjectWizard.Tests.xml</DocumentationFile>
+    <DocumentationFile>bin\x64\Release\Foo.Tests.xml</DocumentationFile>
     <NoWarn>CS1591;CS1587</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -49,7 +49,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
     <SkipPostSharp>False</SkipPostSharp>
-    <DocumentationFile>bin\x86\Debug\MyProjectWizard.Tests.xml</DocumentationFile>
+    <DocumentationFile>bin\x86\Debug\Foo.Tests.xml</DocumentationFile>
     <NoWarn>CS1591;CS1587</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
@@ -63,7 +63,7 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
     <SkipPostSharp>True</SkipPostSharp>
-    <DocumentationFile>bin\x86\Release\MyProjectWizard.Tests.xml</DocumentationFile>
+    <DocumentationFile>bin\x86\Release\Foo.Tests.xml</DocumentationFile>
     <NoWarn>CS1591;CS1587</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -73,10 +73,10 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyName>MyProjectWizard.Tests</AssemblyName>
+    <AssemblyName>Foo.Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup>
-    <RootNamespace>MyProjectWizard.Tests</RootNamespace>
+    <RootNamespace>Foo.Tests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AlphaFS, Version=2.2.0.0, Culture=neutral, PublicKeyToken=4d31a58f7d7ad5c9, processorArchitecture=MSIL">
@@ -130,9 +130,9 @@
       <Project>{c76c6495-9765-4c41-8553-3c1bf2107722}</Project>
       <Name>Core.Files</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyProjectWizard\MyProjectWizard.csproj">
+    <ProjectReference Include="..\Foo\Foo.csproj">
       <Project>{e1893ae3-8f26-4f5e-aa96-c666a4bf0e05}</Project>
-      <Name>MyProjectWizard</Name>
+      <Name>Foo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

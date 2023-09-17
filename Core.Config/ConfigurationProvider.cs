@@ -24,7 +24,7 @@ namespace Core.Config
 
         /// <summary> Gets a string that contains the path to the configuration file. </summary>
         public string ConfigFilePath
-            => Path.Combine(Path.GetTempPath(), "MyProjectWizard.config.json");
+            => Path.Combine(Path.GetTempPath(), "Foo.config.json");
 
         /// <summary>
         /// Gets a reference to an instance of an object that implements the

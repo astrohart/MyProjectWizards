@@ -1,7 +1,7 @@
 ﻿using Core.Config;
 using System;
 
-namespace MyProjectWizard
+namespace Foo
 {
         /// <summary>
         /// Defines the publicly-exposed methods and properties of an Example

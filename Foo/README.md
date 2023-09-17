@@ -1,58 +1,58 @@
 ﻿<a name='assembly'></a>
-# MyProjectWizard
+# Foo
 
 ## Contents
 
-- [ExampleDialogBox](#T-MyProjectWizard-ExampleDialogBox 'MyProjectWizard.ExampleDialogBox')
-  - [#ctor(dte,destinationDirectory)](#M-MyProjectWizard-ExampleDialogBox-#ctor-EnvDTE-DTE,System-String- 'MyProjectWizard.ExampleDialogBox.#ctor(EnvDTE.DTE,System.String)')
-  - [#ctor()](#M-MyProjectWizard-ExampleDialogBox-#ctor 'MyProjectWizard.ExampleDialogBox.#ctor')
-  - [components](#F-MyProjectWizard-ExampleDialogBox-components 'MyProjectWizard.ExampleDialogBox.components')
-  - [CreateDataAccessLayer](#P-MyProjectWizard-ExampleDialogBox-CreateDataAccessLayer 'MyProjectWizard.ExampleDialogBox.CreateDataAccessLayer')
-  - [CreateUserInterfaceLayer](#P-MyProjectWizard-ExampleDialogBox-CreateUserInterfaceLayer 'MyProjectWizard.ExampleDialogBox.CreateUserInterfaceLayer')
-  - [CurrentConfiguration](#P-MyProjectWizard-ExampleDialogBox-CurrentConfiguration 'MyProjectWizard.ExampleDialogBox.CurrentConfiguration')
-  - [DestinationDirectory](#P-MyProjectWizard-ExampleDialogBox-DestinationDirectory 'MyProjectWizard.ExampleDialogBox.DestinationDirectory')
-  - [Dte](#P-MyProjectWizard-ExampleDialogBox-Dte 'MyProjectWizard.ExampleDialogBox.Dte')
-  - [Dispose(disposing)](#M-MyProjectWizard-ExampleDialogBox-Dispose-System-Boolean- 'MyProjectWizard.ExampleDialogBox.Dispose(System.Boolean)')
-  - [InitializeComponent()](#M-MyProjectWizard-ExampleDialogBox-InitializeComponent 'MyProjectWizard.ExampleDialogBox.InitializeComponent')
-  - [OnCheckedChanged(sender,e)](#M-MyProjectWizard-ExampleDialogBox-OnCheckedChanged-System-Object,System-EventArgs- 'MyProjectWizard.ExampleDialogBox.OnCheckedChanged(System.Object,System.EventArgs)')
-  - [OnLinkClickedSelectAllLabel(sender,e)](#M-MyProjectWizard-ExampleDialogBox-OnLinkClickedSelectAllLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs- 'MyProjectWizard.ExampleDialogBox.OnLinkClickedSelectAllLabel(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)')
-  - [OnLinkClickedSelectNoneLabel(sender,e)](#M-MyProjectWizard-ExampleDialogBox-OnLinkClickedSelectNoneLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs- 'MyProjectWizard.ExampleDialogBox.OnLinkClickedSelectNoneLabel(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)')
-- [IExampleDialogBox](#T-MyProjectWizard-IExampleDialogBox 'MyProjectWizard.IExampleDialogBox')
-  - [CreateDataAccessLayer](#P-MyProjectWizard-IExampleDialogBox-CreateDataAccessLayer 'MyProjectWizard.IExampleDialogBox.CreateDataAccessLayer')
-  - [CreateUserInterfaceLayer](#P-MyProjectWizard-IExampleDialogBox-CreateUserInterfaceLayer 'MyProjectWizard.IExampleDialogBox.CreateUserInterfaceLayer')
-  - [CurrentConfiguration](#P-MyProjectWizard-IExampleDialogBox-CurrentConfiguration 'MyProjectWizard.IExampleDialogBox.CurrentConfiguration')
-  - [DestinationDirectory](#P-MyProjectWizard-IExampleDialogBox-DestinationDirectory 'MyProjectWizard.IExampleDialogBox.DestinationDirectory')
-  - [Dte](#P-MyProjectWizard-IExampleDialogBox-Dte 'MyProjectWizard.IExampleDialogBox.Dte')
-  - [ShowDialog(owner)](#M-MyProjectWizard-IExampleDialogBox-ShowDialog-System-Windows-Forms-IWin32Window- 'MyProjectWizard.IExampleDialogBox.ShowDialog(System.Windows.Forms.IWin32Window)')
-  - [ShowDialog()](#M-MyProjectWizard-IExampleDialogBox-ShowDialog 'MyProjectWizard.IExampleDialogBox.ShowDialog')
-- [MakeNewExampleDialogBox](#T-MyProjectWizard-MakeNewExampleDialogBox 'MyProjectWizard.MakeNewExampleDialogBox')
-  - [FromScratch(dte,destinationDirectory)](#M-MyProjectWizard-MakeNewExampleDialogBox-FromScratch-EnvDTE-DTE,System-String- 'MyProjectWizard.MakeNewExampleDialogBox.FromScratch(EnvDTE.DTE,System.String)')
-  - [FromScratch()](#M-MyProjectWizard-MakeNewExampleDialogBox-FromScratch 'MyProjectWizard.MakeNewExampleDialogBox.FromScratch')
-- [Resources](#T-MyProjectWizard-Properties-Resources 'MyProjectWizard.Properties.Resources')
-  - [Culture](#P-MyProjectWizard-Properties-Resources-Culture 'MyProjectWizard.Properties.Resources.Culture')
-  - [ResourceManager](#P-MyProjectWizard-Properties-Resources-ResourceManager 'MyProjectWizard.Properties.Resources.ResourceManager')
-- [WizardImpl](#T-MyProjectWizard-WizardImpl 'MyProjectWizard.WizardImpl')
-  - [_erroneouslyCreatedProjectContainerFolder](#F-MyProjectWizard-WizardImpl-_erroneouslyCreatedProjectContainerFolder 'MyProjectWizard.WizardImpl._erroneouslyCreatedProjectContainerFolder')
-  - [RunFinished()](#M-MyProjectWizard-WizardImpl-RunFinished 'MyProjectWizard.WizardImpl.RunFinished')
-  - [RunStarted(automationObject,replacementsDictionary,runKind,customParams)](#M-MyProjectWizard-WizardImpl-RunStarted-System-Object,System-Collections-Generic-Dictionary{System-String,System-String},Microsoft-VisualStudio-TemplateWizard-WizardRunKind,System-Object[]- 'MyProjectWizard.WizardImpl.RunStarted(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.VisualStudio.TemplateWizard.WizardRunKind,System.Object[])')
+- [ExampleDialogBox](#T-Foo-ExampleDialogBox 'Foo.ExampleDialogBox')
+  - [#ctor(dte,destinationDirectory)](#M-Foo-ExampleDialogBox-#ctor-EnvDTE-DTE,System-String- 'Foo.ExampleDialogBox.#ctor(EnvDTE.DTE,System.String)')
+  - [#ctor()](#M-Foo-ExampleDialogBox-#ctor 'Foo.ExampleDialogBox.#ctor')
+  - [components](#F-Foo-ExampleDialogBox-components 'Foo.ExampleDialogBox.components')
+  - [CreateDataAccessLayer](#P-Foo-ExampleDialogBox-CreateDataAccessLayer 'Foo.ExampleDialogBox.CreateDataAccessLayer')
+  - [CreateUserInterfaceLayer](#P-Foo-ExampleDialogBox-CreateUserInterfaceLayer 'Foo.ExampleDialogBox.CreateUserInterfaceLayer')
+  - [CurrentConfiguration](#P-Foo-ExampleDialogBox-CurrentConfiguration 'Foo.ExampleDialogBox.CurrentConfiguration')
+  - [DestinationDirectory](#P-Foo-ExampleDialogBox-DestinationDirectory 'Foo.ExampleDialogBox.DestinationDirectory')
+  - [Dte](#P-Foo-ExampleDialogBox-Dte 'Foo.ExampleDialogBox.Dte')
+  - [Dispose(disposing)](#M-Foo-ExampleDialogBox-Dispose-System-Boolean- 'Foo.ExampleDialogBox.Dispose(System.Boolean)')
+  - [InitializeComponent()](#M-Foo-ExampleDialogBox-InitializeComponent 'Foo.ExampleDialogBox.InitializeComponent')
+  - [OnCheckedChanged(sender,e)](#M-Foo-ExampleDialogBox-OnCheckedChanged-System-Object,System-EventArgs- 'Foo.ExampleDialogBox.OnCheckedChanged(System.Object,System.EventArgs)')
+  - [OnLinkClickedSelectAllLabel(sender,e)](#M-Foo-ExampleDialogBox-OnLinkClickedSelectAllLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs- 'Foo.ExampleDialogBox.OnLinkClickedSelectAllLabel(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)')
+  - [OnLinkClickedSelectNoneLabel(sender,e)](#M-Foo-ExampleDialogBox-OnLinkClickedSelectNoneLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs- 'Foo.ExampleDialogBox.OnLinkClickedSelectNoneLabel(System.Object,System.Windows.Forms.LinkLabelLinkClickedEventArgs)')
+- [IExampleDialogBox](#T-Foo-IExampleDialogBox 'Foo.IExampleDialogBox')
+  - [CreateDataAccessLayer](#P-Foo-IExampleDialogBox-CreateDataAccessLayer 'Foo.IExampleDialogBox.CreateDataAccessLayer')
+  - [CreateUserInterfaceLayer](#P-Foo-IExampleDialogBox-CreateUserInterfaceLayer 'Foo.IExampleDialogBox.CreateUserInterfaceLayer')
+  - [CurrentConfiguration](#P-Foo-IExampleDialogBox-CurrentConfiguration 'Foo.IExampleDialogBox.CurrentConfiguration')
+  - [DestinationDirectory](#P-Foo-IExampleDialogBox-DestinationDirectory 'Foo.IExampleDialogBox.DestinationDirectory')
+  - [Dte](#P-Foo-IExampleDialogBox-Dte 'Foo.IExampleDialogBox.Dte')
+  - [ShowDialog(owner)](#M-Foo-IExampleDialogBox-ShowDialog-System-Windows-Forms-IWin32Window- 'Foo.IExampleDialogBox.ShowDialog(System.Windows.Forms.IWin32Window)')
+  - [ShowDialog()](#M-Foo-IExampleDialogBox-ShowDialog 'Foo.IExampleDialogBox.ShowDialog')
+- [MakeNewExampleDialogBox](#T-Foo-MakeNewExampleDialogBox 'Foo.MakeNewExampleDialogBox')
+  - [FromScratch(dte,destinationDirectory)](#M-Foo-MakeNewExampleDialogBox-FromScratch-EnvDTE-DTE,System-String- 'Foo.MakeNewExampleDialogBox.FromScratch(EnvDTE.DTE,System.String)')
+  - [FromScratch()](#M-Foo-MakeNewExampleDialogBox-FromScratch 'Foo.MakeNewExampleDialogBox.FromScratch')
+- [Resources](#T-Foo-Properties-Resources 'Foo.Properties.Resources')
+  - [Culture](#P-Foo-Properties-Resources-Culture 'Foo.Properties.Resources.Culture')
+  - [ResourceManager](#P-Foo-Properties-Resources-ResourceManager 'Foo.Properties.Resources.ResourceManager')
+- [WizardImpl](#T-Foo-WizardImpl 'Foo.WizardImpl')
+  - [_erroneouslyCreatedProjectContainerFolder](#F-Foo-WizardImpl-_erroneouslyCreatedProjectContainerFolder 'Foo.WizardImpl._erroneouslyCreatedProjectContainerFolder')
+  - [RunFinished()](#M-Foo-WizardImpl-RunFinished 'Foo.WizardImpl.RunFinished')
+  - [RunStarted(automationObject,replacementsDictionary,runKind,customParams)](#M-Foo-WizardImpl-RunStarted-System-Object,System-Collections-Generic-Dictionary{System-String,System-String},Microsoft-VisualStudio-TemplateWizard-WizardRunKind,System-Object[]- 'Foo.WizardImpl.RunStarted(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.VisualStudio.TemplateWizard.WizardRunKind,System.Object[])')
 
-<a name='T-MyProjectWizard-ExampleDialogBox'></a>
+<a name='T-Foo-ExampleDialogBox'></a>
 ## ExampleDialogBox `type`
 
 ##### Namespace
 
-MyProjectWizard
+Foo
 
 ##### Summary
 
 Sample windows form.
 
-<a name='M-MyProjectWizard-ExampleDialogBox-#ctor-EnvDTE-DTE,System-String-'></a>
+<a name='M-Foo-ExampleDialogBox-#ctor-EnvDTE-DTE,System-String-'></a>
 ### #ctor(dte,destinationDirectory) `constructor`
 
 ##### Summary
 
-Constructs a new instance of [ExampleDialogBox](#T-MyProjectWizard-ExampleDialogBox 'MyProjectWizard.ExampleDialogBox')
+Constructs a new instance of [ExampleDialogBox](#T-Foo-ExampleDialogBox 'Foo.ExampleDialogBox')
 and returns a reference to it.
 
 ##### Parameters
@@ -74,39 +74,39 @@ parameter, `dte`, is passed a `null` value. |
 `destinationDirectory`, is passed a blank or
 `null` string for a value. |
 
-<a name='M-MyProjectWizard-ExampleDialogBox-#ctor'></a>
+<a name='M-Foo-ExampleDialogBox-#ctor'></a>
 ### #ctor() `constructor`
 
 ##### Summary
 
-Constructs a new instance of [ExampleDialogBox](#T-MyProjectWizard-ExampleDialogBox 'MyProjectWizard.ExampleDialogBox') and returns a reference to it.
+Constructs a new instance of [ExampleDialogBox](#T-Foo-ExampleDialogBox 'Foo.ExampleDialogBox') and returns a reference to it.
 
 ##### Parameters
 
 This constructor has no parameters.
 
-<a name='F-MyProjectWizard-ExampleDialogBox-components'></a>
+<a name='F-Foo-ExampleDialogBox-components'></a>
 ### components `constants`
 
 ##### Summary
 
 Required designer variable.
 
-<a name='P-MyProjectWizard-ExampleDialogBox-CreateDataAccessLayer'></a>
+<a name='P-Foo-ExampleDialogBox-CreateDataAccessLayer'></a>
 ### CreateDataAccessLayer `property`
 
 ##### Summary
 
 Gets the value of the Create Data Access Layer checkbox.
 
-<a name='P-MyProjectWizard-ExampleDialogBox-CreateUserInterfaceLayer'></a>
+<a name='P-Foo-ExampleDialogBox-CreateUserInterfaceLayer'></a>
 ### CreateUserInterfaceLayer `property`
 
 ##### Summary
 
 Gets the value of the Create User Interface Layer checkbox.
 
-<a name='P-MyProjectWizard-ExampleDialogBox-CurrentConfiguration'></a>
+<a name='P-Foo-ExampleDialogBox-CurrentConfiguration'></a>
 ### CurrentConfiguration `property`
 
 ##### Summary
@@ -115,7 +115,7 @@ Gets or sets a reference to an instance of an object that implements the
 [IConfiguration](#T-Core-Config-IConfiguration 'Core.Config.IConfiguration') interface whose properties are
 mapped to dialog controls.
 
-<a name='P-MyProjectWizard-ExampleDialogBox-DestinationDirectory'></a>
+<a name='P-Foo-ExampleDialogBox-DestinationDirectory'></a>
 ### DestinationDirectory `property`
 
 ##### Summary
@@ -123,7 +123,7 @@ mapped to dialog controls.
 Gets a string that contains the fully-qualified pathname to the directory to
 which the files for the new project are to be written.
 
-<a name='P-MyProjectWizard-ExampleDialogBox-Dte'></a>
+<a name='P-Foo-ExampleDialogBox-Dte'></a>
 ### Dte `property`
 
 ##### Summary
@@ -131,7 +131,7 @@ which the files for the new project are to be written.
 Gets a reference to an instance of an object that implements the
 [DTE](#T-EnvDTE-DTE 'EnvDTE.DTE') interface.
 
-<a name='M-MyProjectWizard-ExampleDialogBox-Dispose-System-Boolean-'></a>
+<a name='M-Foo-ExampleDialogBox-Dispose-System-Boolean-'></a>
 ### Dispose(disposing) `method`
 
 ##### Summary
@@ -144,7 +144,7 @@ Clean up any resources being used.
 | ---- | ---- | ----------- |
 | disposing | [System.Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') | true if managed resources should be disposed; otherwise, false. |
 
-<a name='M-MyProjectWizard-ExampleDialogBox-InitializeComponent'></a>
+<a name='M-Foo-ExampleDialogBox-InitializeComponent'></a>
 ### InitializeComponent() `method`
 
 ##### Summary
@@ -156,7 +156,7 @@ the contents of this method with the code editor.
 
 This method has no parameters.
 
-<a name='M-MyProjectWizard-ExampleDialogBox-OnCheckedChanged-System-Object,System-EventArgs-'></a>
+<a name='M-Foo-ExampleDialogBox-OnCheckedChanged-System-Object,System-EventArgs-'></a>
 ### OnCheckedChanged(sender,e) `method`
 
 ##### Summary
@@ -174,7 +174,7 @@ Handles the [](#E-System-Windows-Forms-CheckBox-CheckedChanged 'System.Windows.F
 
 This method responds by graying out the button if none of the checkboxes are selected.
 
-<a name='M-MyProjectWizard-ExampleDialogBox-OnLinkClickedSelectAllLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs-'></a>
+<a name='M-Foo-ExampleDialogBox-OnLinkClickedSelectAllLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs-'></a>
 ### OnLinkClickedSelectAllLabel(sender,e) `method`
 
 ##### Summary
@@ -196,7 +196,7 @@ contains the event data. |
 
 This method responds by placing a check mark in all the checkboxes.
 
-<a name='M-MyProjectWizard-ExampleDialogBox-OnLinkClickedSelectNoneLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs-'></a>
+<a name='M-Foo-ExampleDialogBox-OnLinkClickedSelectNoneLabel-System-Object,System-Windows-Forms-LinkLabelLinkClickedEventArgs-'></a>
 ### OnLinkClickedSelectNoneLabel(sender,e) `method`
 
 ##### Summary
@@ -218,32 +218,32 @@ contains the event data. |
 
 This method responds by clearing the check mark in all the checkboxes.
 
-<a name='T-MyProjectWizard-IExampleDialogBox'></a>
+<a name='T-Foo-IExampleDialogBox'></a>
 ## IExampleDialogBox `type`
 
 ##### Namespace
 
-MyProjectWizard
+Foo
 
 ##### Summary
 
 Defines the publicly-exposed methods and properties of an Example dialog box.
 
-<a name='P-MyProjectWizard-IExampleDialogBox-CreateDataAccessLayer'></a>
+<a name='P-Foo-IExampleDialogBox-CreateDataAccessLayer'></a>
 ### CreateDataAccessLayer `property`
 
 ##### Summary
 
 Gets the value of the checkbox.
 
-<a name='P-MyProjectWizard-IExampleDialogBox-CreateUserInterfaceLayer'></a>
+<a name='P-Foo-IExampleDialogBox-CreateUserInterfaceLayer'></a>
 ### CreateUserInterfaceLayer `property`
 
 ##### Summary
 
 Gets the value of the checkbox.
 
-<a name='P-MyProjectWizard-IExampleDialogBox-CurrentConfiguration'></a>
+<a name='P-Foo-IExampleDialogBox-CurrentConfiguration'></a>
 ### CurrentConfiguration `property`
 
 ##### Summary
@@ -252,7 +252,7 @@ Gets or sets a reference to an instance of an object that implements the
 [IConfiguration](#T-Core-Config-IConfiguration 'Core.Config.IConfiguration') interface whose properties are
 mapped to dialog controls.
 
-<a name='P-MyProjectWizard-IExampleDialogBox-DestinationDirectory'></a>
+<a name='P-Foo-IExampleDialogBox-DestinationDirectory'></a>
 ### DestinationDirectory `property`
 
 ##### Summary
@@ -260,7 +260,7 @@ mapped to dialog controls.
 Gets a string that contains the fully-qualified pathname to the directory to
 which the files for the new project are to be written.
 
-<a name='P-MyProjectWizard-IExampleDialogBox-Dte'></a>
+<a name='P-Foo-IExampleDialogBox-Dte'></a>
 ### Dte `property`
 
 ##### Summary
@@ -268,7 +268,7 @@ which the files for the new project are to be written.
 Gets a reference to an instance of an object that implements the
 [DTE](#T-EnvDTE-DTE 'EnvDTE.DTE') interface.
 
-<a name='M-MyProjectWizard-IExampleDialogBox-ShowDialog-System-Windows-Forms-IWin32Window-'></a>
+<a name='M-Foo-IExampleDialogBox-ShowDialog-System-Windows-Forms-IWin32Window-'></a>
 ### ShowDialog(owner) `method`
 
 ##### Summary
@@ -289,7 +289,7 @@ box.
 [IWin32Window](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Windows.Forms.IWin32Window 'System.Windows.Forms.IWin32Window') interface and which plays
 the role of the parent window of the dialog box. |
 
-<a name='M-MyProjectWizard-IExampleDialogBox-ShowDialog'></a>
+<a name='M-Foo-IExampleDialogBox-ShowDialog'></a>
 ### ShowDialog() `method`
 
 ##### Summary
@@ -306,32 +306,32 @@ box.
 
 This method has no parameters.
 
-<a name='T-MyProjectWizard-MakeNewExampleDialogBox'></a>
+<a name='T-Foo-MakeNewExampleDialogBox'></a>
 ## MakeNewExampleDialogBox `type`
 
 ##### Namespace
 
-MyProjectWizard
+Foo
 
 ##### Summary
 
 Creates new instances of objects that implement the
-[IExampleDialogBox](#T-MyProjectWizard-IExampleDialogBox 'MyProjectWizard.IExampleDialogBox') interface, and returns
+[IExampleDialogBox](#T-Foo-IExampleDialogBox 'Foo.IExampleDialogBox') interface, and returns
 references to them.
 
-<a name='M-MyProjectWizard-MakeNewExampleDialogBox-FromScratch-EnvDTE-DTE,System-String-'></a>
+<a name='M-Foo-MakeNewExampleDialogBox-FromScratch-EnvDTE-DTE,System-String-'></a>
 ### FromScratch(dte,destinationDirectory) `method`
 
 ##### Summary
 
 Creates a new instance of an object that implements the
-[IExampleDialogBox](#T-MyProjectWizard-IExampleDialogBox 'MyProjectWizard.IExampleDialogBox') interface and returns a
+[IExampleDialogBox](#T-Foo-IExampleDialogBox 'Foo.IExampleDialogBox') interface and returns a
 reference to it.
 
 ##### Returns
 
 Reference to an instance of an object that implements the
-[IExampleDialogBox](#T-MyProjectWizard-IExampleDialogBox 'MyProjectWizard.IExampleDialogBox') interface.
+[IExampleDialogBox](#T-Foo-IExampleDialogBox 'Foo.IExampleDialogBox') interface.
 
 ##### Parameters
 
@@ -352,36 +352,36 @@ parameter, `dte`, is passed a `null` value. |
 `destinationDirectory`, is passed a blank or
 `null` string for a value. |
 
-<a name='M-MyProjectWizard-MakeNewExampleDialogBox-FromScratch'></a>
+<a name='M-Foo-MakeNewExampleDialogBox-FromScratch'></a>
 ### FromScratch() `method`
 
 ##### Summary
 
 Creates a new instance of an object that implements the
-[IExampleDialogBox](#T-MyProjectWizard-IExampleDialogBox 'MyProjectWizard.IExampleDialogBox') interface and returns a
+[IExampleDialogBox](#T-Foo-IExampleDialogBox 'Foo.IExampleDialogBox') interface and returns a
 reference to it.
 
 ##### Returns
 
 Reference to an instance of an object that implements the
-[IExampleDialogBox](#T-MyProjectWizard-IExampleDialogBox 'MyProjectWizard.IExampleDialogBox') interface.
+[IExampleDialogBox](#T-Foo-IExampleDialogBox 'Foo.IExampleDialogBox') interface.
 
 ##### Parameters
 
 This method has no parameters.
 
-<a name='T-MyProjectWizard-Properties-Resources'></a>
+<a name='T-Foo-Properties-Resources'></a>
 ## Resources `type`
 
 ##### Namespace
 
-MyProjectWizard.Properties
+Foo.Properties
 
 ##### Summary
 
 A strongly-typed resource class, for looking up localized strings, etc.
 
-<a name='P-MyProjectWizard-Properties-Resources-Culture'></a>
+<a name='P-Foo-Properties-Resources-Culture'></a>
 ### Culture `property`
 
 ##### Summary
@@ -389,25 +389,25 @@ A strongly-typed resource class, for looking up localized strings, etc.
 Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 
-<a name='P-MyProjectWizard-Properties-Resources-ResourceManager'></a>
+<a name='P-Foo-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
 
 ##### Summary
 
 Returns the cached ResourceManager instance used by this class.
 
-<a name='T-MyProjectWizard-WizardImpl'></a>
+<a name='T-Foo-WizardImpl'></a>
 ## WizardImpl `type`
 
 ##### Namespace
 
-MyProjectWizard
+Foo
 
 ##### Summary
 
 Implements a new project wizard in Visual Studio.
 
-<a name='F-MyProjectWizard-WizardImpl-_erroneouslyCreatedProjectContainerFolder'></a>
+<a name='F-Foo-WizardImpl-_erroneouslyCreatedProjectContainerFolder'></a>
 ### _erroneouslyCreatedProjectContainerFolder `constants`
 
 ##### Summary
@@ -415,7 +415,7 @@ Implements a new project wizard in Visual Studio.
 String containing the fully-qualified pathname of the erroneously-generated sub-folder of the
 Solution that is going to contain the individual projects' folders.
 
-<a name='M-MyProjectWizard-WizardImpl-RunFinished'></a>
+<a name='M-Foo-WizardImpl-RunFinished'></a>
 ### RunFinished() `method`
 
 ##### Summary
@@ -426,7 +426,7 @@ Runs custom wizard logic when the wizard has completed all tasks.
 
 This method has no parameters.
 
-<a name='M-MyProjectWizard-WizardImpl-RunStarted-System-Object,System-Collections-Generic-Dictionary{System-String,System-String},Microsoft-VisualStudio-TemplateWizard-WizardRunKind,System-Object[]-'></a>
+<a name='M-Foo-WizardImpl-RunStarted-System-Object,System-Collections-Generic-Dictionary{System-String,System-String},Microsoft-VisualStudio-TemplateWizard-WizardRunKind,System-Object[]-'></a>
 ### RunStarted(automationObject,replacementsDictionary,runKind,customParams) `method`
 
 ##### Summary
