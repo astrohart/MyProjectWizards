@@ -1,4 +1,5 @@
-﻿using Core.Config;
+using PostSharp.Patterns.Threading;
+using Core.Config;
 using NUnit.Framework;
 using System;
 using System.Windows.Forms;
@@ -6,7 +7,7 @@ using System.Windows.Forms;
 namespace MyProjectWizard.Tests
 {
 ///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:Foo.ExampleDialogBox" /> class. </summary>
-    [TestFixture]
+    [TextFixture, ExplicitlySynchronized]
     public class ExampleDialogBoxTests
     {
 ///  <summary> Initializes the state of this fixture for every unit test session. </summary>

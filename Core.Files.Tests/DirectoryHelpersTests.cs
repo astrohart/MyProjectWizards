@@ -1,10 +1,11 @@
-﻿using NUnit.Framework;
+using PostSharp.Patterns.Threading;
+using NUnit.Framework;
 using System;
 
 namespace Core.Files.Tests
 {
 ///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:Core.Files.DirectoryHelpers" /> class. </summary>
-    [TestFixture]
+    [TextFixture, ExplicitlySynchronized]
     public class DirectoryHelpersTests
     {
 ///  <summary> Asserts that the <see cref="M:Core.Files.DirectoryHelpers.RemoveDirectory" /> method throws <see cref="T:System.ArgumentException" /> when passed <see langword="null" /> as input. </summary>
