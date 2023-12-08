@@ -6,7 +6,7 @@ using System.IO;
 namespace Core.Files.Tests
 {
 ///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:Core.Files.GetExtraProjectFolderPath" /> class. </summary>
-    [TextFixture, ExplicitlySynchronized]
+    [TestFixture, ExplicitlySynchronized]
     public class GetExtraProjectFolderPathTests
     {
 ///  <summary> Asserts that the <see cref="M:Core.Files.GetExtraProjectFolderPath.FromSafeProjectName" /> method works as expected. </summary>

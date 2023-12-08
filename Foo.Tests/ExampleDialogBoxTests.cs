@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace Foo.Tests
 {
 ///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:Foo.ExampleDialogBox" /> class. </summary>
-    [TextFixture, ExplicitlySynchronized]
+    [TestFixture, ExplicitlySynchronized]
     public class ExampleDialogBoxTests
     {
 ///  <summary> Initializes the state of this fixture for every unit test session. </summary>

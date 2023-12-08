@@ -5,7 +5,7 @@ using System;
 namespace Core.Files.Tests
 {
 ///  <summary> Provides unit tests for the methods, properties, and events of the <see cref="T:Core.Files.DirectoryHelpers" /> class. </summary>
-    [TextFixture, ExplicitlySynchronized]
+    [TestFixture, ExplicitlySynchronized]
     public class DirectoryHelpersTests
     {
 ///  <summary> Asserts that the <see cref="M:Core.Files.DirectoryHelpers.RemoveDirectory" /> method throws <see cref="T:System.ArgumentException" /> when passed <see langword="null" /> as input. </summary>
