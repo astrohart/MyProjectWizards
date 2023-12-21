@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+using PostSharp.Patterns.Threading;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
 using System.Globalization;
@@ -6,6 +7,7 @@ using System.Globalization;
 namespace Core.Config
 {
     /// <summary> Converts instances of Configuration objects to and from JSON. </summary>
+    [ExplicitlySynchronized]
     public static class ConvertConfiguration
     {
         /// <summary>
