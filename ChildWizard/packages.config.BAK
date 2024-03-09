@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="AlphaFS" targetFramework="net48" version="2.2.6" />
+  <package developmentDependency="true" id="Costura.Fody" targetFramework="net48" version="5.7.0" />
+  <package id="envdte80" targetFramework="net48" version="17.9.37000" />
+  <package developmentDependency="true" id="Fody" targetFramework="net48" version="6.8.0" />
+  <package allowedVersions="[2.0.15, 2.0.15]" id="log4net" targetFramework="net48" version="2.0.15" />
+  <package id="Microsoft.NETCore.Platforms" targetFramework="net48" version="7.0.4" />
+  <package id="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime" targetFramework="net48" version="17.9.37000" />
+  <package id="Microsoft.VisualStudio.Interop" targetFramework="net48" version="17.9.37000" />
+  <package id="Microsoft.Win32.Primitives" targetFramework="net48" version="4.3.0" />
+  <package id="NETStandard.Library" targetFramework="net48" version="2.0.3" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Aggregation" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Aggregation.Redist" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Common" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Common.Redist" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Model" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Model.Redist" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Threading" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Patterns.Threading.Redist" targetFramework="net48" version="2024.0.5" />
+  <package allowedVersions="[2024.0.5, 2024.0.5]" id="PostSharp.Redist" targetFramework="net48" version="2024.0.5" />
+  <package id="StrongNamer" targetFramework="net48" version="0.2.5" />
+  <package id="System.AppContext" targetFramework="net48" version="4.3.0" />
+  <package id="System.Buffers" targetFramework="net48" version="4.5.1" />
+  <package id="System.Collections" targetFramework="net48" version="4.3.0" />
+  <package id="System.Collections.Concurrent" targetFramework="net48" version="4.3.0" />
+  <package id="System.Console" targetFramework="net48" version="4.3.1" />
+  <package id="System.Diagnostics.Debug" targetFramework="net48" version="4.3.0" />
+  <package id="System.Diagnostics.DiagnosticSource" targetFramework="net48" version="8.0.0" />
+  <package id="System.Diagnostics.Tools" targetFramework="net48" version="4.3.0" />
+  <package id="System.Diagnostics.Tracing" targetFramework="net48" version="4.3.0" />
+  <package id="System.Globalization" targetFramework="net48" version="4.3.0" />
+  <package id="System.Globalization.Calendars" targetFramework="net48" version="4.3.0" />
+  <package id="System.IO" targetFramework="net48" version="4.3.0" />
+  <package id="System.IO.Compression" targetFramework="net48" version="4.3.0" />
+  <package id="System.IO.Compression.ZipFile" targetFramework="net48" version="4.3.0" />
+  <package id="System.IO.FileSystem" targetFramework="net48" version="4.3.0" />
+  <package id="System.IO.FileSystem.Primitives" targetFramework="net48" version="4.3.0" />
+  <package id="System.Linq" targetFramework="net48" version="4.3.0" />
+  <package id="System.Linq.Expressions" targetFramework="net48" version="4.3.0" />
+  <package id="System.Memory" targetFramework="net48" version="4.5.5" />
+  <package id="System.Net.Http" targetFramework="net48" version="4.3.4" />
+  <package id="System.Net.Primitives" targetFramework="net48" version="4.3.1" />
+  <package id="System.Net.Sockets" targetFramework="net48" version="4.3.0" />
+  <package id="System.Numerics.Vectors" targetFramework="net48" version="4.5.0" />
+  <package id="System.ObjectModel" targetFramework="net48" version="4.3.0" />
+  <package id="System.Reflection" targetFramework="net48" version="4.3.0" />
+  <package id="System.Reflection.Extensions" targetFramework="net48" version="4.3.0" />
+  <package id="System.Reflection.Primitives" targetFramework="net48" version="4.3.0" />
+  <package id="System.Resources.ResourceManager" targetFramework="net48" version="4.3.0" />
+  <package id="System.Runtime" targetFramework="net48" version="4.3.1" />
+  <package id="System.Runtime.CompilerServices.Unsafe" targetFramework="net48" version="6.0.0" />
+  <package id="System.Runtime.Extensions" targetFramework="net48" version="4.3.1" />
+  <package id="System.Runtime.Handles" targetFramework="net48" version="4.3.0" />
+  <package id="System.Runtime.InteropServices" targetFramework="net48" version="4.3.0" />
+  <package id="System.Runtime.InteropServices.RuntimeInformation" targetFramework="net48" version="4.3.0" />
+  <package id="System.Runtime.Numerics" targetFramework="net48" version="4.3.0" />
+  <package id="System.Security.Cryptography.Algorithms" targetFramework="net48" version="4.3.1" />
+  <package id="System.Security.Cryptography.Encoding" targetFramework="net48" version="4.3.0" />
+  <package id="System.Security.Cryptography.Primitives" targetFramework="net48" version="4.3.0" />
+  <package id="System.Security.Cryptography.X509Certificates" targetFramework="net48" version="4.3.2" />
+  <package id="System.Text.Encoding" targetFramework="net48" version="4.3.0" />
+  <package id="System.Text.Encoding.Extensions" targetFramework="net48" version="4.3.0" />
+  <package id="System.Text.RegularExpressions" targetFramework="net48" version="4.3.1" />
+  <package id="System.Threading" targetFramework="net48" version="4.3.0" />
+  <package id="System.Threading.Tasks" targetFramework="net48" version="4.3.0" />
+  <package id="System.Threading.Timer" targetFramework="net48" version="4.3.0" />
+  <package id="System.Xml.ReaderWriter" targetFramework="net48" version="4.3.1" />
+  <package id="System.Xml.XDocument" targetFramework="net48" version="4.3.0" />
+  <package id="VSSDK.DTE" targetFramework="net48" version="7.0.4" />
+  <package id="VSSDK.IDE" targetFramework="net48" version="7.0.4" />
+  <package id="VSSDK.IDE.12" targetFramework="net48" version="12.0.4" />
+  <package id="VSSDK.TemplateWizardInterface" targetFramework="net48" version="12.0.4" />
+  <package developmentDependency="true" id="Vsxmd" targetFramework="net48" version="1.4.5" />
+</packages>
