@@ -1,4 +1,4 @@
-﻿using Core.Files.Properties;
+using Core.Files.Properties;
 using System;
 using System.IO;
 

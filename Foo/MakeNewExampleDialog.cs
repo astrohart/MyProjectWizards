@@ -1,4 +1,4 @@
-﻿namespace Foo
+namespace Foo
 {
     /// <summary>
     /// Creates new instances of objects that implement the

@@ -1,4 +1,4 @@
-﻿namespace Core.Common
+namespace Core.Common
 {
 ///  <summary> Constants that give the suffix names for sub-projects. </summary>
     public static class SubProjectNameSuffixes

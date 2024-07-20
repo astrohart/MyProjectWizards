@@ -1,4 +1,4 @@
-﻿using Core.Common;
+using Core.Common;
 using Core.Files;
 using EnvDTE;
 using EnvDTE80;

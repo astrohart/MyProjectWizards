@@ -1,4 +1,4 @@
-﻿namespace Core.Files.Tests
+namespace Core.Files.Tests
 {
 ///  <summary> Constants for working with strings in unit tests. </summary>
     public static class UnitTestStringConstants

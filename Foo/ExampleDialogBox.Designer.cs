@@ -1,4 +1,4 @@
-﻿
+
 namespace Foo
 {
     partial class ExampleDialogBox
