@@ -1,5 +1,4 @@
-
-namespace Foo
+﻿namespace Foo
 {
     partial class ExampleDialogBox
     {

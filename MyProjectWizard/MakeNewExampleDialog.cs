@@ -1,4 +1,4 @@
-namespace MyProjectWizard
+﻿namespace MyProjectWizard
 {
     /// <summary>
     /// Creates new instances of objects that implement the

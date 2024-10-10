@@ -1,4 +1,4 @@
-using Core.Common;
+﻿using Core.Common;
 using EnvDTE;
 using System;
 using System.Windows.Forms;

@@ -1,4 +1,4 @@
-using Core.Config;
+﻿using Core.Config;
 using System;
 
 namespace Foo

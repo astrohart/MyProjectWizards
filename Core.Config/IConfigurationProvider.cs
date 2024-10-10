@@ -1,4 +1,4 @@
-namespace Core.Config
+﻿namespace Core.Config
 {
 ///  <summary> Defines the publicly-exposed methods and properties of <c>Configuration Provider</c> objects. </summary>
     public interface IConfigurationProvider

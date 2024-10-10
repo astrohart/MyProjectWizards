@@ -1,5 +1,4 @@
-
-namespace ChildWizard
+﻿namespace ChildWizard
 {
     partial class ExampleDialogBox
     {

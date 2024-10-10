@@ -1,4 +1,4 @@
-using PostSharp.Patterns.Threading;
+﻿using PostSharp.Patterns.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System;
