@@ -17,10 +17,10 @@ namespace Core.Config
         static ConfigurationProvider() { }
 
         /// <summary>
-        /// Empty, protected constructor to prohibit direct allocation of this
+        /// Empty, private constructor to prohibit direct allocation of this
         /// class.
         /// </summary>
-        protected ConfigurationProvider() { }
+        private ConfigurationProvider() { }
 
         /// <summary> Gets a string that contains the path to the configuration file. </summary>
         public string ConfigFilePath
