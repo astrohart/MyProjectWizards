@@ -15,7 +15,7 @@ namespace Core.Common
         protected DTE _dte;
 
 ///  <summary> Gets or sets a reference to an instance of an object that implements the <see cref="T:Core.Config.IConfiguration" /> interface. </summary>
-        public IConfiguration CurrentConfiguration { get; set; }
+        public IConfiguration CurrentConfiguration { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
 
 ///  <summary> Gets a reference to an instance of the object that implements the <see cref="T:Core.Config.IConfigurationProvider" /> interface. </summary>
         protected static IConfigurationProvider ConfigurationProvider
