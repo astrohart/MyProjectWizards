@@ -4,9 +4,9 @@
     public interface IConfiguration
     {
 ///  <summary> Gets or sets a value that indicates whether the Data Access Layer (DAL) project should be created. </summary>
-        bool CreateDataAccessLayer { get; set; }
+        bool CreateDataAccessLayer { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
 
 ///  <summary> Gets or sets a value that indicates whether the user-interface (UI) layer project should be created. </summary>
-        bool CreateUserInterfaceLayer { get; set; }
+        bool CreateUserInterfaceLayer { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
     }
 }
