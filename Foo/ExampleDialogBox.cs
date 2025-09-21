@@ -79,13 +79,13 @@ namespace Foo
         /// Gets a string that contains the fully-qualified pathname to the
         /// directory to which the files for the new project are to be written.
         /// </summary>
-        public string DestinationDirectory { get; }
+        public string DestinationDirectory { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets a reference to an instance of an object that implements the
         /// <see cref="T:EnvDTE.DTE" /> interface.
         /// </summary>
-        public DTE Dte { get; }
+        public DTE Dte { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Handles the
@@ -102,8 +102,8 @@ namespace Foo
         /// contains the event data.
         /// </param>
         /// <remarks>This method responds by placing a check mark in all the checkboxes.</remarks>
-        private void OnLinkClickedSelectAllLabel(object sender,
-            LinkLabelLinkClickedEventArgs e)
+        private void OnLinkClickedSelectAllLabel([NotLogged] object sender,
+        [NotLogged] LinkLabelLinkClickedEventArgs e)
         {
             foreach (var checkBox in Controls.OfType<CheckBox>())
                 checkBox.Checked = true;
@@ -124,8 +124,8 @@ namespace Foo
         /// contains the event data.
         /// </param>
         /// <remarks>This method responds by clearing the check mark in all the checkboxes.</remarks>
-        private void OnLinkClickedSelectNoneLabel(object sender,
-            LinkLabelLinkClickedEventArgs e)
+        private void OnLinkClickedSelectNoneLabel([NotLogged] object sender,
+        [NotLogged] LinkLabelLinkClickedEventArgs e)
         {
             foreach (var checkBox in Controls.OfType<CheckBox>())
                 checkBox.Checked = false;
@@ -148,7 +148,7 @@ namespace Foo
         /// This method responds by graying out the <b>Create</b> button if none
         /// of the checkboxes are selected.
         /// </remarks>
-        private void OnCheckedChanged(object sender, EventArgs e)
+        private void OnCheckedChanged([NotLogged] object sender, [NotLogged] EventArgs e)
             => createButton.Enabled = createDataAccessLayerCheckBox.Checked ||
                                       createUserInterfaceLayerCheckBox.Checked;
     }
