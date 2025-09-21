@@ -4,10 +4,10 @@
     public interface IConfigurationProvider
     {
 ///  <summary> Gets a string that contains the path to the configuration file. </summary>
-        string ConfigFilePath { get; }
+        string ConfigFilePath { [DebuggerStepThrough] get; }
 
 ///  <summary> Gets a reference to an instance of an object that implements the <see cref="T:Core.Config.IConfiguration" /> interface. <para /> This object is the currently-loaded configuration. </summary>
-        IConfiguration CurrentConfiguration { get; }
+        IConfiguration CurrentConfiguration { [DebuggerStepThrough] get; }
 
 ///  <summary> Saves the specified <paramref name="configuration" /> to a file. </summary> <param name="path"> (Required.) String containing the fully-qualified pathname on the disk to which the <paramref name="configuration" /> data should be saved. </param> <param name="configuration"> (Required.) Reference to an instance of an object that implements the <see cref="T:Core.Config.IConfiguration" /> interface that contains the data to be saved. </param>
         void Save(string path, IConfiguration configuration);
