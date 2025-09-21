@@ -70,29 +70,29 @@ namespace ChildWizard
         /// Gets the <see cref="T:ChildWizard.WizardAction" /> value that
         /// specifies the choice the user has made.
         /// </summary>
-        public WizardAction Action { get; private set; }
+        public WizardAction Action { [DebuggerStepThrough] get; [DebuggerStepThrough] private set; }
 
         /// <summary>
         /// Gets a string that contains the fully-qualified pathname to the
         /// directory to which the files for the new project are to be written.
         /// </summary>
-        public string DestinationDirectory { get; }
+        public string DestinationDirectory { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets a reference to an instance of an object that implements the
         /// <see cref="T:EnvDTE.DTE" /> interface.
         /// </summary>
-        public DTE Dte { get; }
+        public DTE Dte { [DebuggerStepThrough] get; }
 
         /// <summary> Gets a string containing the name of the project to be generated. </summary>
-        public string SafeProjectName { get; }
+        public string SafeProjectName { [DebuggerStepThrough] get; }
 
         /// <summary>Raises the <see cref="E:System.Windows.Forms.Form.Load" /> event.</summary>
         /// <param name="e">
         /// An <see cref="T:System.EventArgs" /> that contains the event
         /// data.
         /// </param>
-        protected override void OnLoad(EventArgs e)
+        protected override void OnLoad([NotLogged] EventArgs e)
         {
             base.OnLoad(e);
 
@@ -120,7 +120,7 @@ namespace ChildWizard
         /// throw
         /// <see cref="T:Microsoft.VisualStudio.TemplateWizard.WizardBackoutException" />.
         /// </remarks>
-        private void OnClickNoButton(object sender, EventArgs e)
+        private void OnClickNoButton([NotLogged] object sender, [NotLogged] EventArgs e)
             => Action = WizardAction.Backout;
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace ChildWizard
         /// The function of this button is to tell the caller of this dialog that it should
         /// let the operation proceed.
         /// </remarks>
-        private void OnClickYesButton(object sender, EventArgs e)
+        private void OnClickYesButton([NotLogged] object sender, [NotLogged] EventArgs e)
             => Action = WizardAction.Create;
     }
 }
