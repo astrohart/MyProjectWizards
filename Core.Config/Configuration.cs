@@ -20,13 +20,13 @@ namespace Core.Config
         /// (DAL) project should be created.
         /// </summary>
         [JsonProperty("CreateDataAccessLayer")]
-        public bool CreateDataAccessLayer { get; set; }
+        public bool CreateDataAccessLayer { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
 
         /// <summary>
         /// Gets or sets a value that indicates whether the user-interface (UI)
         /// layer project should be created.
         /// </summary>
         [JsonProperty("CreateUserInterfaceLayer")]
-        public bool CreateUserInterfaceLayer { get; set; }
+        public bool CreateUserInterfaceLayer { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
     }
 }
