@@ -9,29 +9,29 @@ namespace MyProjectWizard
         public interface IExampleDialogBox : IDisposable
     {
             /// <summary> Gets the value of the <b>Create Data Access Layer</b> checkbox. </summary>
-            bool CreateDataAccessLayer { get; }
+            bool CreateDataAccessLayer { [DebuggerStepThrough] get; }
 
             /// <summary> Gets the value of the <b>Create User Interface Layer</b> checkbox. </summary>
-            bool CreateUserInterfaceLayer { get; }
+            bool CreateUserInterfaceLayer { [DebuggerStepThrough] get; }
 
             /// <summary>
             /// Gets or sets a reference to an instance of an object that implements
             /// the <see cref="T:Core.Config.IConfiguration" /> interface whose properties are
             /// mapped to dialog controls.
             /// </summary>
-            IConfiguration CurrentConfiguration { get; set; }
+            IConfiguration CurrentConfiguration { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
 
             /// <summary>
             /// Gets a string that contains the fully-qualified pathname to the
             /// directory to which the files for the new project are to be written.
             /// </summary>
-            string DestinationDirectory { get; }
+            string DestinationDirectory { [DebuggerStepThrough] get; }
 
             /// <summary>
             /// Gets a reference to an instance of an object that implements the
             /// <see cref="T:EnvDTE.DTE" /> interface.
             /// </summary>
-            DTE Dte { get; }
+            DTE Dte { [DebuggerStepThrough] get; }
 
             /// <summary> Shows the dialog box as a modal window. </summary>
             /// <param name="owner">
