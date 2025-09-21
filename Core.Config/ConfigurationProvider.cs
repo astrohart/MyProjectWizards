@@ -32,13 +32,13 @@ namespace Core.Config
         /// <para />
         /// This object is the currently-loaded configuration.
         /// </summary>
-        public IConfiguration CurrentConfiguration { get; private set; }
+        public IConfiguration CurrentConfiguration { [DebuggerStepThrough] get; [DebuggerStepThrough] private set; }
 
         /// <summary>
         /// Gets a reference to the one and only instance of
         /// <see cref="T:Core.Config.ConfigurationProvider" />.
         /// </summary>
-        public static ConfigurationProvider Instance { get; } =
+        public static ConfigurationProvider Instance { [DebuggerStepThrough] get; } =
             new ConfigurationProvider();
 
         /// <summary> Saves the specified <paramref name="configuration" /> to a file. </summary>
