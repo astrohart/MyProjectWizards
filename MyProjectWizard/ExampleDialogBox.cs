@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PostSharp.Patterns.Diagnostics;
+using System.Diagnostics;
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
