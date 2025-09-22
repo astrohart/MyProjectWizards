@@ -1,4 +1,6 @@
-﻿namespace Foo
+﻿using PostSharp.Patterns.Diagnostics;
+using System.Diagnostics;
+namespace Foo
 {
     /// <summary>
     /// Creates new instances of objects that implement the
