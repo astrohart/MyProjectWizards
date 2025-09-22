@@ -1,4 +1,6 @@
-﻿namespace MyProjectWizard
+﻿using PostSharp.Patterns.Diagnostics;
+using System.Diagnostics;
+namespace MyProjectWizard
 {
     /// <summary>
     /// Creates new instances of objects that implement the
