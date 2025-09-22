@@ -1,4 +1,6 @@
-﻿using Core.Common;
+﻿using PostSharp.Patterns.Diagnostics;
+using System.Diagnostics;
+using Core.Common;
 using EnvDTE;
 using System;
 using System.Windows.Forms;
