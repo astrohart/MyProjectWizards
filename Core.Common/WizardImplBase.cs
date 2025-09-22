@@ -1,4 +1,5 @@
-﻿using Core.Config;
+﻿using System.Diagnostics;
+using Core.Config;
 using EnvDTE;
 using Microsoft.VisualStudio.TemplateWizard;
 using System;
