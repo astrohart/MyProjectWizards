@@ -1,4 +1,6 @@
-﻿using Core.Config;
+﻿using PostSharp.Patterns.Diagnostics;
+using System.Diagnostics;
+using Core.Config;
 using System;
 
 namespace Foo
