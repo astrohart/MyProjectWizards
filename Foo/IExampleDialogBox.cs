@@ -1,4 +1,5 @@
-﻿using Core.Config;
+﻿using System.Diagnostics;
+using Core.Config;
 using System;
 
 namespace Foo
