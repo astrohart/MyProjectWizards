@@ -1,4 +1,5 @@
-﻿namespace Core.Config
+﻿using System.Diagnostics;
+namespace Core.Config
 
 using PostSharp.Patterns.Diagnostics;
 {
