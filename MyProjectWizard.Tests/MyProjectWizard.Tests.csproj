@@ -24,7 +24,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\MyProjectWizard.Tests.xml</DocumentationFile>
-    <NoWarn>CS1591;CS1587</NoWarn>
+    <NoWarn>1591, 1587, 1580, 1584</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -34,7 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\MyProjectWizard.Tests.xml</DocumentationFile>
-    <NoWarn>CS1591;CS1587</NoWarn>
+    <NoWarn>1591, 1587, 1580, 1584</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>1382_cogs.ico</ApplicationIcon>
