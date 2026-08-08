@@ -143,7 +143,7 @@ namespace Foo
         /// event.
         /// </param>
         /// <param name="e">
-        /// A <see cref="T:System.EventArgs" /> that contains the event
+        /// An <see cref="T:System.EventArgs" /> that contains the event
         /// data.
         /// </param>
         /// <remarks>
