@@ -14,6 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Files.Tests", "Core.Fi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49017771-44CC-48C5-AD8D-C9AFC1354387}"
 	ProjectSection(SolutionItems) = preProject
+		2 Sep 2026 Robust Visual Studio Package Manager Console Automation Script Guidelines Rev C.md = 2 Sep 2026 Robust Visual Studio Package Manager Console Automation Script Guidelines Rev C.md
 		approvedPackages.json = approvedPackages.json
 		README.md = README.md
 		Template.zip = Template.zip
